@@ -1,0 +1,118 @@
+:root {
+  --default-font: -apple-system, BlinkMacSystemFont, Roboto, helvetica neue, sans-serif;
+  --spartan: "LeagueSpartanVariable";
+
+  --h1-clamp: clamp(6.5rem, 15vw, 30rem);
+  --default-font-size: 1.75rem;
+  --pale-blue: #c1dcee;
+  --blue: #389dd6;
+  --dark-blue: #064f99;
+  --light-blue: #68b0de;
+}
+
+@font-face {
+  font-family: "LeagueSpartanVariable";
+  src: url("https://assets.codepen.io/1149983/LeagueSpartan-VF.woff2") format("woff2-variations");
+  font-weight: 200 900;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--spartan), var(--default-font);
+  text-transform: uppercase;
+  background-color: black;
+}
+
+h1 {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background-image: url("https://img.freepik.com/free-photo/lake-mountains_1204-507.jpg");
+  background-size: auto;
+  background-position: initial;
+  
+  display: inline;
+  user-select: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.headings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+p {
+    font-size: 20px;
+}
+
+.reveal section h2 {
+    font-size: 30px;
+}
+
+
+.hero-slide {
+  position: relative;
+}
+
+.hero-overlay-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* sous le texte */
+  pointer-events: none;
+}
+
+.hero-overlay-lines svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide .headings {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-slide {
+  position: relative;
+}
+
+.hero-overlay-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* sous le texte */
+  pointer-events: none;
+}
+
+.hero-overlay-lines svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-overlay-lines path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 0;
+  animation: wave 12s ease-in-out infinite alternate;
+}
+
+.hero-overlay-lines path:nth-child(2) {
+  animation-duration: 14s;
+}
+.hero-overlay-lines path:nth-child(3) {
+  animation-duration: 16s;
+}
+
+@keyframes wave {
+  0% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.hero-slide .headings {
+  position: relative;
+  z-index: 2;
+}

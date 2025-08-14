@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+		<link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="dist/svg.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- overlay global (hors des sections) -->
+			<div id="global-hero-overlay" aria-hidden="true"></div>
+		  
+			<div class="slides">
+				<section class="hero-slide hero-fill"
+						 data-background="https://img.freepik.com/free-photo/lake-mountains_1204-507.jpg"
+						 data-background-size="cover"
+						 data-background-position="center"
+						 data-fill-text="CropTraits">
+            
+          <div class="hero-overlay-shapes"></div>
+					<div class="headings">
+					<h2>Soutenance de Stage</h2>
+					<h1 class="sr-only">CropTraits</h1>
+					<p>Entre informatique et écologie fonctionnelle</p>
+					</div>
+				</section>
+	   
+		  
+			  <section>Slide 2</section>
+			</div>
+		  </div>
+		  
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+    <script src="dist/js/svg.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

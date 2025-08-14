@@ -1,0 +1,100 @@
+/* DEBUG helper: ajoute "debug" au <body> pour outlines (tmp) */
+body.debug .reveal .slides .headings { outline: 2px dashed rgba(255,0,0,0.55); }
+body.debug #global-hero-overlay { outline: 2px dashed rgba(0,255,0,0.45); }
+
+/* overlay global (on cible l'ID que tu as dans ton HTML) */
+#global-hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;      /* très haut pour être sûr d'être visible */
+  display: none;      /* affiché uniquement si slide concernée */
+  mix-blend-mode: normal;
+}
+
+/* reserve a slot in the middle for the SVG masked title */
+.hero-slide .headings {
+  /* default slot (fallback) if JS doesn't run yet */
+  --rhf-slot: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  text-align: center;
+}
+
+.hero-slide .headings h1 {
+  color: #ffffff;
+  text-shadow:
+    2px 2px 6px rgba(0,0,0,0.7),  /* ombre principale */
+    0 0 4px rgba(0,0,0,0.5);      /* léger glow */
+}
+
+
+
+/* push h2 up by half the slot, and p down by half the slot */
+.hero-slide .headings h2 {
+  margin: 0 0 calc(var(--rhf-slot) / 2);
+}
+
+.hero-slide .headings p {
+  margin: calc(var(--rhf-slot) / 2) 0 0;
+}
+
+/* svg full-size */
+#global-hero-overlay svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* fallback / outline visible derrière l'image masquée
+   on dessine d'abord une version "outline" solide du texte pour lisibilité */
+#global-hero-overlay #rhfTextFallback {
+  font-family: "LeagueSpartanVariable", system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  fill: url(#textGradient);
+  transform: translate(5px, 0);
+  stroke: rgba(0,0,0,0.7);
+  stroke-width: 3px;
+  paint-order: stroke fill;
+  filter: 
+    drop-shadow(2px 2px 4px rgba(0,0,0,1))
+    drop-shadow(-2px -2px 4px rgba(0,0,0,5));
+}
+
+#global-hero-overlay #rhfTextFallback {
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+/* texte qui servira de mask (l'image sera visible DANS ce texte) */
+#global-hero-overlay #rhfTextMask {
+  font-family: "LeagueSpartanVariable", system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  fill: white; /* act as mask (white => visible) */
+  /*paint-order: stroke fill;
+  stroke: rgba(0,0,0,0.6);
+  stroke-width: 2px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7));*/
+}
+
+/* accessible fallback: keep sr-only correct */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  border: 0; white-space: nowrap;
+}
+
+/* ensure slide headings are above/below as needed — ajuste si besoin */
+.reveal .slides .headings { position: relative; z-index: 10000; }
+
+.reveal .slide-background.present { opacity: 0.3; }
+
+/* utility: hide overlay quickly */
+#global-hero-overlay.hidden { display: none !important; }
