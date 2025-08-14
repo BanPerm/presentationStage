@@ -11,21 +11,26 @@
 		<link rel="stylesheet" href="dist/theme/moon.css">
 		<link rel="stylesheet" href="dist/main.css">
     <link rel="stylesheet" href="dist/svg.css">
+    <link rel="stylesheet" href="dist/css/slide2.css">
+    <link rel="stylesheet" href="dist/css/presentation.css">
+
+    <!-- overlay global (hors des sections) -->
+    <div id="global-hero-overlay" aria-hidden="true"></div>
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
 		<div class="reveal">
-			<!-- overlay global (hors des sections) -->
-			<div id="global-hero-overlay" aria-hidden="true"></div>
 		  
 			<div class="slides">
 				<section class="hero-slide hero-fill"
-						 data-background="https://img.freepik.com/free-photo/lake-mountains_1204-507.jpg"
+						 data-background="https://images.pexels.com/photos/4406172/pexels-photo-4406172.jpeg"
 						 data-background-size="cover"
 						 data-background-position="center"
 						 data-fill-text="CropTraits">
+
+             
             
           <div class="hero-overlay-shapes"></div>
 					<div class="headings">
@@ -36,7 +41,81 @@
 				</section>
 	   
 		  
-			  <section>Slide 2</section>
+			  <section id="sommaire-page" >
+          <div class="overlay-sommaire">
+            <div class="sommaire-left">
+              <img src="https://cdn.pixabay.com/photo/2022/01/17/18/28/christmas-6945482_640.jpg" alt="Page de sommaire avec éléments graphiques">
+            </div>
+            <div id="sommaire">
+              <h2>Sommaire</h2>
+              <ul class="sommaire-list">
+                <li data-slide="1">Chapitre 1 - Introduction</li>
+                <li data-slide="2">Chapitre 2 - Théorie</li>
+                <li data-slide="3">Chapitre 3 - Pratique</li>
+                <li data-slide="4">Chapitre 4 - Conclusion</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      <section>
+        <section class="evolution-cefe">
+          <div class="overlay"></div>
+          <h1>De 1961 à aujourd'hui</h1>
+          <div class="timeline">
+            <div class="event">
+              <div class="circle">📚</div>
+              <p><strong>1961</strong><br>Création du CEPE (Centre d’Études Phytosociologiques et Écologiques)</p>
+            </div>
+            <div class="event">
+              <div class="circle">🔬</div>
+              <p><strong>1987</strong><br>Transformation en CEFE (Centre d’Écologie Fonctionnelle et Évolutive)</p>
+            </div>
+            <div class="event">
+              <div class="circle">🌍</div>
+              <p><strong>2003</strong><br>Unité Mixte de Recherche (UMR 5175) associant CNRS, Université de Montpellier, IRD, CIRAD</p>
+            </div>
+          </div>
+          <p class="mission">Recherche en écologie et biodiversité, de la bactérie à la planète</p>
+        </section>
+
+        <section class="ecopar-slide">
+          <div class="overlay"></div>
+          <h1>ECOPAR</h1>
+          <p class="description">Écologie comparative des communautés végétales et de leur fonctionnement</p>
+          <div class="research-focus">
+            <div class="focus-item">
+              <div class="icon">🌱</div>
+              <p>Traits fonctionnels des plantes</p>
+            </div>
+            <div class="focus-item">
+              <div class="icon">🌍</div>
+              <p>Interactions biotiques et abiotiques</p>
+            </div>
+            <div class="focus-item">
+              <div class="icon">🔬</div>
+              <p>Écophysiologie comparative</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="croptaits-slide">
+          <div class="overlay"></div>
+          <h1>CropTraits</h1>
+          <p class="description">Base de données sur les traits écophysiologiques des plantes cultivées</p>
+          <div class="visualization">
+            <img src="https://shiny.cefe.cnrs.fr/CropTrait/" alt="Interface de CropTraits" />
+          </div>
+          <p class="details">
+            <strong>Objectif :</strong> Analyser les profils fonctionnels des espèces cultivées<br />
+            <strong>Contenu :</strong> 131 traits, 85 413 observations, 288 taxons<br />
+          </p>
+        </section>
+        
+      </section>
+        
+        
+        
+        
 			</div>
 		  </div>
 		  
@@ -46,12 +125,15 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
     <script src="dist/js/svg.js"></script>
+    <script src="dist/js/slide2.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+        width: '100%',
+	      height: '100%',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
