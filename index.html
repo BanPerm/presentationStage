@@ -1,51 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/moon.css">
-		<link rel="stylesheet" href="dist/main.css">
-    <link rel="stylesheet" href="dist/svg.css">
-    <link rel="stylesheet" href="dist/css/slide2.css">
-    <link rel="stylesheet" href="dist/css/presentation.css">
+    <title>reveal.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/moon.css" />
+    <link rel="stylesheet" href="dist/main.css" />
+    <link rel="stylesheet" href="dist/svg.css" />
+    <link rel="stylesheet" href="dist/css/slide2.css" />
+    <link rel="stylesheet" href="dist/css/presentation.css" />
+    <link rel="stylesheet" href="dist/css/timeline.css" />
 
     <!-- overlay global (hors des sections) -->
     <div id="global-hero-overlay" aria-hidden="true"></div>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-		  
-			<div class="slides">
-				<section class="hero-slide hero-fill"
-						 data-background="https://images.pexels.com/photos/4406172/pexels-photo-4406172.jpeg"
-						 data-background-size="cover"
-						 data-background-position="center"
-						 data-fill-text="CropTraits">
-
-             
-            
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          class="hero-slide hero-fill"
+          data-background="https://images.pexels.com/photos/4406172/pexels-photo-4406172.jpeg"
+          data-background-size="cover"
+          data-background-position="center"
+          data-fill-text="CropTraits"
+        >
           <div class="hero-overlay-shapes"></div>
-					<div class="headings">
-					<h2>Soutenance de Stage</h2>
-					<h1 class="sr-only">CropTraits</h1>
-					<p>Entre informatique et écologie fonctionnelle</p>
-					</div>
-				</section>
-	   
-		  
-			  <section id="sommaire-page" >
+          <div class="headings">
+            <h2>Soutenance de Stage</h2>
+            <h1 class="sr-only">CropTraits</h1>
+            <p>Entre informatique et écologie fonctionnelle</p>
+          </div>
+        </section>
+
+        <section id="sommaire-page">
           <div class="overlay-sommaire">
             <div class="sommaire-left">
-              <img src="https://cdn.pixabay.com/photo/2022/01/17/18/28/christmas-6945482_640.jpg" alt="Page de sommaire avec éléments graphiques">
+              <img
+                src="../presentationStage/img/treev3good.png"
+                alt="Page de sommaire avec éléments graphiques"
+                .r-stretch
+              />
             </div>
+            <div id="leaves"></div>
             <div id="sommaire">
               <h2>Sommaire</h2>
               <ul class="sommaire-list">
@@ -57,87 +63,148 @@
             </div>
           </div>
         </section>
-      <section>
-        <section class="evolution-cefe">
-          <div class="overlay"></div>
-          <h1>De 1961 à aujourd'hui</h1>
-          <div class="timeline">
-            <div class="event">
-              <div class="circle">📚</div>
-              <p><strong>1961</strong><br>Création du CEPE (Centre d’Études Phytosociologiques et Écologiques)</p>
-            </div>
-            <div class="event">
-              <div class="circle">🔬</div>
-              <p><strong>1987</strong><br>Transformation en CEFE (Centre d’Écologie Fonctionnelle et Évolutive)</p>
-            </div>
-            <div class="event">
-              <div class="circle">🌍</div>
-              <p><strong>2003</strong><br>Unité Mixte de Recherche (UMR 5175) associant CNRS, Université de Montpellier, IRD, CIRAD</p>
-            </div>
-          </div>
-          <p class="mission">Recherche en écologie et biodiversité, de la bactérie à la planète</p>
-        </section>
+        <section>
+          <section class="evolution-cefe">
+            <div class="evo-inner">
+              <h1>De 1961 à <span>aujourd'hui</span></h1>
 
-        <section class="ecopar-slide">
-          <div class="overlay"></div>
-          <h1>ECOPAR</h1>
-          <p class="description">Écologie comparative des communautés végétales et de leur fonctionnement</p>
-          <div class="research-focus">
-            <div class="focus-item">
-              <div class="icon">🌱</div>
-              <p>Traits fonctionnels des plantes</p>
-            </div>
-            <div class="focus-item">
-              <div class="icon">🌍</div>
-              <p>Interactions biotiques et abiotiques</p>
-            </div>
-            <div class="focus-item">
-              <div class="icon">🔬</div>
-              <p>Écophysiologie comparative</p>
-            </div>
-          </div>
-        </section>
+              <div class="timeline-container">
+                <article class="timeline-block left fragment">
+                  <div class="marker" aria-hidden="true">📚</div>
+                  <div class="timeline-content">
+                    <h3>1961 — Fondation (CEPE)</h3>
+                    <p>
+                      Le 1er juillet 1961 est créé le Centre d’Études
+                      Phytosociologiques et Écologiques (CEPE), berceau
+                      historique des activités aujourd’hui conduites par le
+                      CEFE. :contentReference[oaicite:0]{index=0}
+                    </p>
+                  </div>
+                </article>
 
-        <section class="croptaits-slide">
-          <div class="overlay"></div>
-          <h1>CropTraits</h1>
-          <p class="description">Base de données sur les traits écophysiologiques des plantes cultivées</p>
-          <div class="visualization">
-            <img src="https://shiny.cefe.cnrs.fr/CropTrait/" alt="Interface de CropTraits" />
-          </div>
-          <p class="details">
-            <strong>Objectif :</strong> Analyser les profils fonctionnels des espèces cultivées<br />
-            <strong>Contenu :</strong> 131 traits, 85 413 observations, 288 taxons<br />
-          </p>
-        </section>
-        
-      </section>
-        
-        
-        
-        
-			</div>
-		  </div>
-		  
+                <article class="timeline-block right fragment">
+                  <div class="marker" aria-hidden="true">🏗️</div>
+                  <div class="timeline-content">
+                    <h3>1962–1967 — Construction des bâtiments</h3>
+                    <p>
+                      Les premiers bâtiments du centre ont été érigés durant les
+                      années 1960, imposant un lieu d’expérimentation et
+                      d’observations de terrain pour la recherche écologique.
+                      :contentReference[oaicite:1]{index=1}
+                    </p>
+                  </div>
+                </article>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
+                <article class="timeline-block left fragment">
+                  <div class="marker" aria-hidden="true">🔁</div>
+                  <div class="timeline-content">
+                    <h3>1987–1988 — De CEPE à CEFE</h3>
+                    <p>
+                      Le CEPE devient le Centre d’Écologie Fonctionnelle et
+                      Évolutive (CEFE) à la fin des années 1980, recentrant la
+                      mission sur l’écologie fonctionnelle et évolutive.
+                      (sources historiques indiquent 1987–1988 selon archives).
+                      :contentReference[oaicite:2]{index=2}
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-block right fragment">
+                  <div class="marker" aria-hidden="true">🏛️</div>
+                  <div class="timeline-content">
+                    <h3>UMR 5175 & tutelles</h3>
+                    <p>
+                      Le CEFE est aujourd’hui UMR 5175, rassemblant plusieurs
+                      tutelles académiques (CNRS, Université de Montpellier,
+                      EPHE, IRD… selon période) et joue un rôle central dans la
+                      recherche en écologie à Montpellier.
+                      :contentReference[oaicite:3]{index=3}
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-block left fragment">
+                  <div class="marker" aria-hidden="true">🔬</div>
+                  <div class="timeline-content">
+                    <h3>Sujets majeurs</h3>
+                    <p>
+                      Thèmes : dynamique et fonctionnement des organismes,
+                      biodiversité, changements environnementaux à grande
+                      échelle, écologie évolutive et approches multi-échelles —
+                      du gène au paysage. :contentReference[oaicite:4]{index=4}
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="ecopar-slide">
+            <div class="overlay"></div>
+            <h1>ECOPAR</h1>
+            <p class="description">
+              Écologie comparative des communautés végétales et de leur
+              fonctionnement
+            </p>
+            <div class="research-focus">
+              <div class="focus-item">
+                <div class="icon">🌱</div>
+                <p>Traits fonctionnels des plantes</p>
+              </div>
+              <div class="focus-item">
+                <div class="icon">🌍</div>
+                <p>Interactions biotiques et abiotiques</p>
+              </div>
+              <div class="focus-item">
+                <div class="icon">🔬</div>
+                <p>Écophysiologie comparative</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="croptaits-slide">
+            <div class="overlay"></div>
+            <h1>CropTraits</h1>
+            <p class="description">
+              Base de données sur les traits écophysiologiques des plantes
+              cultivées
+            </p>
+            <div class="visualization">
+              <img
+                src="https://shiny.cefe.cnrs.fr/CropTrait/"
+                alt="Interface de CropTraits"
+              />
+            </div>
+            <p class="details">
+              <strong>Objectif :</strong> Analyser les profils fonctionnels des
+              espèces cultivées<br />
+              <strong>Contenu :</strong> 131 traits, 85 413 observations, 288
+              taxons<br />
+            </p>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
     <script src="dist/js/svg.js"></script>
     <script src="dist/js/slide2.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-        width: '100%',
-	      height: '100%',
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/js/timeline.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        width: "100%",
+        height: "100%",
+        margin: 0,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>

@@ -1,48 +1,4 @@
-.evolution-cefe {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    background: linear-gradient(135deg, #2a7a4b, #66b377);
-    position: relative;
-    padding: 2rem;
-    overflow: hidden;
-  }
-  
-  .evolution-cefe h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-  
-  .timeline {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  
-  .event {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px;
-  }
-  
-  .circle {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .mission {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin-top: 2rem;
-  }
-  
+
   .overlay {
     position: absolute;
     inset: 0;

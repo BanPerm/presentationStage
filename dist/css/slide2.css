@@ -1,83 +1,126 @@
+/* Conteneur global */
 .overlay-sommaire {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/* Image d'arrière-plan */
+.sommaire-left img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
+/* Sommaire décoratif */
+#sommaire {
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(30, 25, 15, 0.85);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  color: #fdfcf8;
+  min-height: 60vh;
+  position: relative;
+  width: 70vw; 
+}
+
+/* Titre */
+#sommaire h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffe9c4;
+  padding-bottom: 0.5rem;
+}
+
+/* Liste */
+ul.sommaire-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Items sobres */
+ul.sommaire-list li {
+  font-size: 1.5rem;
+  padding: 1rem 0; 
+  margin: 0.7rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fdfcf8;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+ul.sommaire-list li:last-child {
+  border-bottom: none;
+}
+
+/* Hover = léger glissement et couleur dorée */
+ul.sommaire-list li:hover {
+  color: #ffd37a;
+  background-color: rgba(0,0,0,0.5);
+  transform: translateX(8px);
 }
 
 .sommaire-left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-#sommaire-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+.sommaire-left img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  transform: scaleX(-1);
+  object-fit: cover;
+  z-index: -1;
+  max-width: none;
+  max-height: none;
 }
 
-#sommaire {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    justify-content: center;
-    min-width: 300px;
-    max-width: 600px;
-    background-color: rgba(0,0,0,0);
-    margin-right: 10vw;
+
+
+#leaves {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 100px);
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
 }
 
-  #sommaire h2 {
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
-  }
-
-  ul.sommaire-list {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    margin: 0;
-  }
-
-  ul.sommaire-list li {
-    font-size: 1.6rem;
-    padding: 0.7rem 1.2rem;
-    border-radius: 12px;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
-    cursor: pointer;
-    color: #fff;
-    margin: 0;
-  }
-
-  ul.sommaire-list li:hover {
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 600px) {
-    #sommaire {
-      padding: 2rem 2rem;
-    }
-
-    #sommaire h2 {
-      font-size: 2rem;
-    }
-
-    ul.sommaire-list li {
-      font-size: 1.3rem;
-    }
-  }
+.leaf {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('../../img/leaf.png') no-repeat center/contain;
+  opacity: 0.8;
+  transform-origin: center;
+  animation-name: floatDown;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
