@@ -1,33 +1,80 @@
-(function(){
-  const scroller = document.querySelector('.timeline-container');
-  if (!scroller) return;
+(function () {
+  // ——— CSS à avoir sur le conteneur ———
+  // .timeline-container { max-height: 62vh; overflow: auto; overscroll-behavior: contain; scroll-behavior: smooth; }
 
-  scroller.setAttribute('tabindex','0'); // permet focus + scroll clavier si besoin
+  function setupForSlide(slide) {
+    if (!slide) return;
+    const scroller = slide.querySelector('.timeline-container');
+    if (!scroller || scroller.dataset.bound) return;
 
-  scroller.addEventListener('wheel', (e) => {
-    const canScrollUp = scroller.scrollTop > 0;
-    const canScrollDown = scroller.scrollTop + scroller.clientHeight < scroller.scrollHeight;
+    scroller.dataset.bound = '1';
+    scroller.tabIndex = 0;
 
-    if ((e.deltaY < 0 && canScrollUp) || (e.deltaY > 0 && canScrollDown)) {
-      // on veut scroller dans le container -> empêcher la propagation vers Reveal
+    // — Wheel: empêcher Reveal + scroller nous-mêmes (même en butée)
+    scroller.addEventListener('wheel', (e) => {
+      const max = scroller.scrollHeight - scroller.clientHeight;
+      if (max <= 0) return; // pas scrollable → laisser Reveal
+
       e.stopPropagation();
-    }
-    // sinon laisser le scroll se propager (changement de slide)
-  }, { passive: false });
+      e.preventDefault();
 
-  // Touch pour mobile
-  scroller.addEventListener('touchstart', (e) => {
-    scroller._startY = e.touches[0].clientY;
-  }, { passive: true });
+      const next = Math.min(max, Math.max(0, scroller.scrollTop + e.deltaY));
+      scroller.scrollTop = next;
+      // DEBUG
+      // console.log('scrollTop:', scroller.scrollTop, 'max:', max);
+    }, { passive: false });
 
-  scroller.addEventListener('touchmove', (e) => {
-    const currentY = e.touches[0].clientY;
-    const dy = scroller._startY - currentY;
-    const canScrollUp = scroller.scrollTop > 0;
-    const canScrollDown = scroller.scrollTop + scroller.clientHeight < scroller.scrollHeight;
+    // — Touch (mobile)
+    let lastY = 0;
+    scroller.addEventListener('touchstart', (e) => { lastY = e.touches[0].clientY; }, { passive: true });
+    scroller.addEventListener('touchmove', (e) => {
+      const max = scroller.scrollHeight - scroller.clientHeight;
+      if (max <= 0) return;
 
-    if ((dy < 0 && canScrollUp) || (dy > 0 && canScrollDown)) {
       e.stopPropagation();
+      e.preventDefault();
+
+      const y = e.touches[0].clientY;
+      const dy = lastY - y;
+      lastY = y;
+
+      const next = Math.min(max, Math.max(0, scroller.scrollTop + dy));
+      scroller.scrollTop = next;
+    }, { passive: false });
+  }
+
+  // — Auto-centre le fragment visible dans le container
+  function scrollFragmentIntoView(el) {
+    if (!el) return;
+    const scroller = el.closest('.timeline-container');
+    if (!scroller) return;
+
+    const rect = el.getBoundingClientRect();
+    const srect = scroller.getBoundingClientRect();
+    const targetTop = scroller.scrollTop + (rect.top - srect.top) - (srect.height * 0.25);
+
+    scroller.scrollTo({ top: targetTop, behavior: 'smooth' });
+  }
+
+  // Bind quand Reveal est prêt / change de slide
+  Reveal.on('ready', (e) => setupForSlide(e.currentSlide || Reveal.getCurrentSlide()));
+  Reveal.on('slidechanged', (e) => setupForSlide(e.currentSlide));
+
+  // Suivre les fragments
+  Reveal.on('fragmentshown', (e) => {
+    if (e.fragment && e.fragment.closest('.timeline-container')) {
+      scrollFragmentIntoView(e.fragment);
     }
-  }, { passive: false });
+  });
+
+  Reveal.on('fragmenthidden', (e) => {
+    const scroller = e.fragment && e.fragment.closest('.timeline-container');
+    if (!scroller) return;
+    const visibles = scroller.querySelectorAll('.fragment.visible');
+    if (visibles.length) {
+      scrollFragmentIntoView(visibles[visibles.length - 1]);
+    } else {
+      scroller.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
 })();

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="dist/css/slide2.css" />
     <link rel="stylesheet" href="dist/css/presentation.css" />
     <link rel="stylesheet" href="dist/css/timeline.css" />
+    <link rel="stylesheet" href="dist/css/ecopar.css" />
+    <link rel="stylesheet" href="dist/css/objectif.css" />
 
     <!-- overlay global (hors des sections) -->
     <div id="global-hero-overlay" aria-hidden="true"></div>
@@ -55,10 +57,10 @@
             <div id="sommaire">
               <h2>Sommaire</h2>
               <ul class="sommaire-list">
-                <li data-slide="1">Chapitre 1 - Introduction</li>
-                <li data-slide="2">Chapitre 2 - Théorie</li>
-                <li data-slide="3">Chapitre 3 - Pratique</li>
-                <li data-slide="4">Chapitre 4 - Conclusion</li>
+                <li data-slide="1">Contexte et présentation</li>
+                <li data-slide="2">Travaux réalisés</li>
+                <li data-slide="3">Résultats et perspectives</li>
+                <li data-slide="4">Bilan et conclusion</li>
               </ul>
             </div>
           </div>
@@ -77,7 +79,7 @@
                       Le 1er juillet 1961 est créé le Centre d’Études
                       Phytosociologiques et Écologiques (CEPE), berceau
                       historique des activités aujourd’hui conduites par le
-                      CEFE. :contentReference[oaicite:0]{index=0}
+                      CEFE.
                     </p>
                   </div>
                 </article>
@@ -90,7 +92,6 @@
                       Les premiers bâtiments du centre ont été érigés durant les
                       années 1960, imposant un lieu d’expérimentation et
                       d’observations de terrain pour la recherche écologique.
-                      :contentReference[oaicite:1]{index=1}
                     </p>
                   </div>
                 </article>
@@ -104,7 +105,6 @@
                       Évolutive (CEFE) à la fin des années 1980, recentrant la
                       mission sur l’écologie fonctionnelle et évolutive.
                       (sources historiques indiquent 1987–1988 selon archives).
-                      :contentReference[oaicite:2]{index=2}
                     </p>
                   </div>
                 </article>
@@ -118,7 +118,6 @@
                       tutelles académiques (CNRS, Université de Montpellier,
                       EPHE, IRD… selon période) et joue un rôle central dans la
                       recherche en écologie à Montpellier.
-                      :contentReference[oaicite:3]{index=3}
                     </p>
                   </div>
                 </article>
@@ -131,7 +130,7 @@
                       Thèmes : dynamique et fonctionnement des organismes,
                       biodiversité, changements environnementaux à grande
                       échelle, écologie évolutive et approches multi-échelles —
-                      du gène au paysage. :contentReference[oaicite:4]{index=4}
+                      du gène au paysage.
                     </p>
                   </div>
                 </article>
@@ -139,49 +138,143 @@
             </div>
           </section>
 
-          <section class="ecopar-slide">
-            <div class="overlay"></div>
-            <h1>ECOPAR</h1>
-            <p class="description">
-              Écologie comparative des communautés végétales et de leur
-              fonctionnement
-            </p>
-            <div class="research-focus">
-              <div class="focus-item">
-                <div class="icon">🌱</div>
-                <p>Traits fonctionnels des plantes</p>
+          <section
+            class="ecopar-slide"
+            data-bg="../presentationStage/img/ecopar-team.jpg"
+          >
+            <!-- background layer (we'll set image from data-bg or inline style) -->
+            <div
+              class="ecopar-bg"
+              style="background-image: url('../presentationStage/img/team.jpg')"
+            ></div>
+
+            <!-- dark overlay for contrast -->
+            <div class="ecopar-overlay"></div>
+
+            <!-- content -->
+            <div class="ecopar-inner">
+              <div class="ecopar-left">
+                <h1>ECOPAR</h1>
+                <p class="ecopar-sub">
+                  Écologie comparative des communautés végétales et de leur
+                  fonctionnement
+                </p>
+
+                <div class="ecopar-meta">
+                  <span class="chip">UMR 5175</span>
+                  <span class="chip">CNRS • Univ. Montpellier</span>
+                  <span class="chip">Terrains & laboratoires</span>
+                </div>
               </div>
-              <div class="focus-item">
-                <div class="icon">🌍</div>
-                <p>Interactions biotiques et abiotiques</p>
-              </div>
-              <div class="focus-item">
-                <div class="icon">🔬</div>
-                <p>Écophysiologie comparative</p>
+
+              <div class="ecopar-right">
+                <div class="research-focus">
+                  <article class="focus-item fragment">
+                    <div class="focus-media"><div class="icon">🌱</div></div>
+                    <div class="focus-body">
+                      <h4>Traits fonctionnels</h4>
+                      <p>
+                        Mesure et analyse des traits des plantes pour comprendre
+                        performance et compétition.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article class="focus-item fragment">
+                    <div class="focus-media"><div class="icon">🌍</div></div>
+                    <div class="focus-body">
+                      <h4>Interactions & milieux</h4>
+                      <p>
+                        Études biotiques / abiotiques à l’échelle du peuplement
+                        et du paysage.
+                      </p>
+                    </div>
+                  </article>
+
+                  <article class="focus-item fragment">
+                    <div class="focus-media"><div class="icon">🔬</div></div>
+                    <div class="focus-body">
+                      <h4>Écophysiologie</h4>
+                      <p>
+                        Comparaisons fonctionnelles pour prévoir les réponses
+                        face aux changements climatiques.
+                      </p>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
           </section>
 
-          <section class="croptaits-slide">
-            <div class="overlay"></div>
-            <h1>CropTraits</h1>
-            <p class="description">
-              Base de données sur les traits écophysiologiques des plantes
-              cultivées
-            </p>
-            <div class="visualization">
-              <img
-                src="https://shiny.cefe.cnrs.fr/CropTrait/"
-                alt="Interface de CropTraits"
-              />
-            </div>
-            <p class="details">
-              <strong>Objectif :</strong> Analyser les profils fonctionnels des
-              espèces cultivées<br />
-              <strong>Contenu :</strong> 131 traits, 85 413 observations, 288
-              taxons<br />
-            </p>
-          </section>
+          <section class="cropttraits-slide">
+  <div class="overlay"></div>
+
+  <!-- Div globale pour centrer tout le contenu -->
+  <div class="cropttraits-container">
+    <h1>CropTraits</h1>
+    <p class="description">
+      Base de données sur les traits écophysiologiques des plantes cultivées.
+    </p>
+
+    <div class="cropttraits-stats">
+      <div class="stat-item">
+        <div class="icon">🎯</div>
+        <div class="number">Analyse</div>
+        <div class="label">Profils fonctionnels</div>
+      </div>
+      <div class="stat-item">
+        <div class="icon">📊</div>
+        <div class="number">131</div>
+        <div class="label">Traits mesurés</div>
+      </div>
+      <div class="stat-item">
+        <div class="icon">🌱</div>
+        <div class="number">85 413</div>
+        <div class="label">Observations</div>
+      </div>
+      <div class="stat-item">
+        <div class="icon">🧬</div>
+        <div class="number">288</div>
+        <div class="label">Taxons</div>
+      </div>
+    </div>
+
+    <div class="visualization">
+      <img
+        src="https://shiny.cefe.cnrs.fr/CropTrait/"
+        alt="Interface de CropTraits"
+      />
+    </div>
+  </div>
+</section>
+
+        </section>
+        <section class="stage-context-slide">
+          <div class="overlay"></div>
+          <h1>Contexte du stage et objectifs</h1>
+
+          <div class="stage-content">
+  <div class="stage-block">
+  <h2>Limites de l'ancien système</h2>
+  <ul class="ul-circles">
+    <li style="--accent-color:#D3302C">Processus trop long et complexe</li>
+    <li style="--accent-color:#F3A22D">Manque de coordination entre équipes</li>
+    <li style="--accent-color:#495460">Difficultés dans le suivi des tâches</li>
+    <li style="--accent-color:#2E8B57">Outils peu adaptés aux besoins</li>
+  </ul>
+</div>
+
+<div class="stage-block">
+  <h2>Objectifs du stage</h2>
+  <ul class="ul-circles">
+    <li style="--accent-color:#1E90FF">Optimiser les flux de travail</li>
+    <li style="--accent-color:#32CD32">Créer des outils plus intuitifs</li>
+    <li style="--accent-color:#FF8C00">Améliorer la communication inter-équipes</li>
+    <li style="--accent-color:#9370DB">Documenter les procédures existantes</li>
+  </ul>
+</div>
+
+
         </section>
       </div>
     </div>

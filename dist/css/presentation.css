@@ -9,109 +9,116 @@
   }
   
 
-  .ecopar-slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    background: linear-gradient(135deg, #2a7a4b, #66b377);
-    position: relative;
-    padding: 2rem;
-    overflow: hidden;
-  }
-  
-  .ecopar-slide h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .ecopar-slide .description {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-  }
-  
-  .ecopar-slide .research-focus {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  
-  .ecopar-slide .focus-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px;
-  }
-  
-  .ecopar-slide .icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .ecopar-slide .team {
-    font-size: 1.2rem;
-    margin-top: 2rem;
-  }
-  
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background: url('https://www.transparenttextures.com/patterns/leaf.png') repeat;
-    opacity: 0.1;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
+/* Overlay de la slide */
+.cropttraits-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url('../presentationStage/img/croptraits-bg.jpg') center/cover no-repeat;
+  color: #eef7f1;
+  font-family: "Inter", system-ui, -apple-system, "Roboto", sans-serif;
+}
 
-  .croptaits-slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    background: linear-gradient(135deg, #2a7a4b, #66b377);
-    position: relative;
-    padding: 2rem;
-    overflow: hidden;
-  }
-  
-  .croptaits-slide h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .croptaits-slide .description {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-  }
-  
-  .croptaits-slide .visualization img {
-    max-width: 80%;
-    margin-bottom: 2rem;
-  }
-  
-  .croptaits-slide .details {
-    font-size: 1.2rem;
-    max-width: 600px;
-  }
-  
-  /* Overlay décoratif */
-  .croptaits-slide .overlay {
-    position: absolute;
-    inset: 0;
-    background: url('https://www.transparenttextures.com/patterns/leaf.png') repeat;
-    opacity: 0.1;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
+.cropttraits-slide .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Conteneur central pour tout centrer */
+.cropttraits-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centré verticalement */
+  align-items: center;     /* centré horizontalement */
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Titre et description */
+.cropttraits-container h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.cropttraits-container .description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  max-width: 720px;
+  color: rgba(240,248,240,0.9);
+}
+
+/* Stats visuelles */
+.cropttraits-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 80%;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  min-width: 150px;
+}
+
+.stat-item:hover { transform: translateY(-5px) scale(1.02); }
+
+.stat-item .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item .number {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.stat-item .label {
+  font-size: 0.9rem;
+  color: rgba(220,235,225,0.9);
+}
+
+/* Visualisation principale */
+.cropttraits-container .visualization {
+  width: 80%;
+  max-width: 900px;
+  border: 8px solid #f9f6e3;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5), inset 0 0 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  background: #fff;
+}
+
+.cropttraits-container .visualization img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .cropttraits-container h1 { font-size: 2.4rem; }
+  .cropttraits-container .description { font-size: 1rem; }
+  .cropttraits-stats { width: 95%; gap: 1rem; }
+  .cropttraits-container .visualization { width: 95%; }
+}

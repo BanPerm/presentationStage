@@ -37,6 +37,8 @@
   position: relative;
   margin: 1.5rem 0;
   padding: 1.5rem 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.06)) center/3px 100% no-repeat;
+  background-attachment: local;
 }
 .reveal .timeline-container::before {
   content: "";
@@ -46,7 +48,6 @@
   transform: translateX(-50%);
   width: 3px;
   height: 100%;
-  background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.06));
   border-radius: 2px;
   z-index: 1;
 }
@@ -97,13 +98,12 @@
 
 /* rendre la timeline scrollable */
 .reveal .timeline-container {
-  max-height: calc(70vh);      /* ajuste la hauteur selon ton design */
+  max-height: calc(70vh);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding-right: 18px;         /* espace pour la scrollbar */
 }
 
-.reveal .timeline-container::-webkit-scrollbar { width: 10px; }
+.reveal .timeline-container::-webkit-scrollbar { display: none; }
 .reveal .timeline-container::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.08);
   border-radius: 8px;
@@ -122,17 +122,18 @@
 }
 .reveal .timeline-content p { margin:0; color: var(--muted); font-size: 0.98rem; line-height:1.45; }
 
+.reveal .timeline-block .timeline-content {
+  margin-top: 0.5rem;
+}
+
 /* left/right alignment */
 .reveal .timeline-block.left .timeline-content {
   grid-column:1/2;
   justify-self: end;
-  text-align: right;
-  padding-right: 2rem;
 }
 .reveal .timeline-block.right .timeline-content {
   grid-column:3/4;
   justify-self:start;
-  text-align:left;
   padding-left: 2rem;
 }
 

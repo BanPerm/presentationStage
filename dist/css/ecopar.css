@@ -1,0 +1,204 @@
+/* ---------- ECOPAR slide - stylé ---------- */
+.reveal .ecopar-slide {
+  position: relative;
+  overflow: hidden;
+  min-height: 65vh;
+  color: #eef7f1;
+  font-family: "Inter", system-ui, -apple-system, "Roboto", sans-serif;
+}
+
+.reveal .ecopar-slide .ecopar-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+
+  /* effet vieille photo */
+  filter: grayscale(1) contrast(1.2) sepia(0.6);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+
+  /* bord carré style vieille photo */
+  border: 20px solid #f9f6e3; /* blanc-jaune ivoire */
+  border-radius: 0; /* plus de coins arrondis */
+  
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5), inset 0 0 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* grain subtil */
+.reveal .ecopar-slide .ecopar-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://assets.codepen.io/1506195/noise.svg");
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* vignette douce */
+.reveal .ecopar-slide .ecopar-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+  mix-blend-mode: multiply;
+}
+
+/* overlay gradient for contrast */
+.reveal .ecopar-slide .ecopar-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.55);
+  border-radius: 0; /* overlay aussi carré */
+  z-index: 1;
+}
+
+/* decorative svg */
+.reveal .ecopar-slide .ecopar-decor {
+  position: absolute;
+  right: -15%;
+  top: -2%;
+  width: 60%;
+  height: 30%;
+  z-index: 2;
+  opacity: 0.9;
+  pointer-events: none;
+  filter: blur(8px) brightness(1.08);
+}
+
+
+.ecopar-inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+    gap: 2.25rem;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    justify-content: center;
+}
+
+/* main content */
+.reveal .ecopar-slide {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 2.25rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.ecopar-slide{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* left column (title + meta) */
+.reveal .ecopar-slide .ecopar-left h1 {
+  font-size: 3.1rem;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: 0.6px;
+  color: #f6fff7;
+  text-shadow: 0 6px 20px rgba(20, 30, 25, 0.6);
+}
+.reveal .ecopar-slide .ecopar-sub {
+  margin: 0 0 1rem 0;
+  font-style: italic;
+  color: rgba(240,248,240,0.9);
+  font-size: 1.05rem;
+}
+.reveal .ecopar-slide .ecopar-tagline {
+  margin: 0 0 1.25rem 0;
+  color: rgba(230,245,234,0.9);
+  max-width: 36rem;
+}
+
+/* chips */
+.reveal .ecopar-slide .ecopar-meta { display:flex; gap:0.6rem; flex-wrap:wrap; justify-content: space-evenly; }
+.reveal .ecopar-slide .chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #dff0df;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+}
+
+/* right column (cards) */
+.reveal .ecopar-slide .research-focus {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+.reveal .ecopar-slide .focus-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 0.9rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(2,8,6,0.45);
+  backdrop-filter: blur(6px) saturate(1.05);
+  transform-origin: center left;
+}
+.reveal .ecopar-slide .focus-media {
+  width: 64px; height: 64px;
+  flex: 0 0 64px;
+  border-radius: 12px;
+  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(180deg, rgba(143,191,110,0.14), rgba(255,211,122,0.06));
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 8px 16px rgba(6,10,8,0.3) inset;
+}
+.reveal .ecopar-slide .focus-media .icon { font-size: 1.8rem; }
+
+.focus-body {
+    margin: auto;
+}
+
+.reveal .ecopar-slide .focus-body h4 {
+  margin: 0 0 0.25rem 0;
+  color: #e8f9ea;
+  font-size: 1.5rem;
+}
+.reveal .ecopar-slide .focus-body p {
+  margin: 0;
+  color: rgba(220,235,225,0.9);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+
+
+/* footer small */
+.reveal .ecopar-slide .ecopar-footer { margin-top: 0.6rem; color: rgba(220,235,225,0.55); font-size: 0.85rem; }
+
+/* hover micro-interaction */
+.reveal .ecopar-slide .focus-item:hover { transform: translateY(-6px) scale(1.01); }
+
+/* responsive: stack on small screens */
+@media (max-width: 960px) {
+  .reveal .ecopar-slide .ecopar-inner { grid-template-columns: 1fr; gap: 1rem; padding: 4vh 4vw; }
+  .reveal .ecopar-slide .ecopar-decor { display:none; }
+  .reveal .ecopar-slide .ecopar-left h1 { font-size: 2.4rem; }
+  .reveal .ecopar-slide .research-focus { grid-template-columns: 1fr; }
+}
