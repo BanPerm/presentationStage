@@ -1,15 +1,19 @@
+/* font awesome import (optionnel) */
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+
+/* === Section Stage Context Slide === */
 .stage-context-slide {
-  position: relative !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-  color: #eef7f1 !important;
-  font-family: "Inter", system-ui, -apple-system, "Roboto", sans-serif !important;
-  background: url('../presentationStage/img/context-bg.jpg') center/cover no-repeat !important;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #eef7f1;
+  font-family: "Inter", system-ui, -apple-system, "Roboto", sans-serif;
+  background: url('../presentationStage/img/context-bg.jpg') center/cover no-repeat;
 }
 
 .stage-context-slide .overlay {
@@ -28,79 +32,99 @@
 }
 
 .stage-content {
-  position: relative;
-  z-index: 1;
   display: flex;
+  gap: 2rem;
   justify-content: center;
   align-items: flex-start;
-  gap: 4rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .stage-block {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  min-width: 220px;
+  flex: 1 1 320px;
+  text-align: center;
 }
 
 .stage-block h2 {
-  font-size: 1.8rem;  /* Augmenter la taille des sous-titres */
-  margin-bottom: 1.5rem;
-  color: #fff;  /* Assure une bonne visibilité */
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
-/* Conteneur principal */
-.stage-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 3rem;
-  flex-wrap: wrap;
+/* === Cercles === */
+.ul-circles * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .ul-circles {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  --innerSize: 6rem; /* taille fixe du cercle */
+  --rimSize: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(var(--repeatVal, auto-fit), minmax(var(--innerSize), 1fr));
+  justify-content: center;
+  gap: var(--rimSize);
+
+  padding: var(--rimSize);
   font-family: "Inter", sans-serif;
+  list-style: none;
+}
+
+.ul-circles.ul-circles-vertical {
+  --repeatVal: 1;
 }
 
 .ul-circles > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  width: var(--innerSize);
+  height: var(--innerSize);  /* fixe la taille pour que le texte ne l’étire pas */
+  border-radius: 50%;
   position: relative;
-  padding-left: 2rem; /* espace pour le rond */
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1.4;
+
+  /* Fond blanc derrière le texte */
+  background: rgba(255, 255, 255, 1);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  /* Ombre externe */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
-/* Le petit cercle coloré */
+/* Halo et couleur derrière les cercles */
 .ul-circles > li::before {
   content: "";
   position: absolute;
-  top: 0.4rem; /* aligne le rond avec le texte */
-  left: 0;
-  width: 1rem;
-  height: 1rem;
+  width: calc(100% + 2 * var(--rimSize));
+  height: calc(100% + 2 * var(--rimSize));
+  left: calc(-1 * var(--rimSize));
+  top: calc(-1 * var(--rimSize));
   border-radius: 50%;
   background: var(--accent-color, #4caf50);
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+  z-index: -1;
 }
 
-/* La ligne qui relie les points */
-.ul-circles > li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 1.5rem;
-  left: 0.45rem; /* centré avec le rond */
-  width: 0.1rem;
-  height: calc(100% + 1rem);
-  background: var(--accent-color, #4caf50);
-  opacity: 0.8;
+/* Clip alterné pour les lignes horizontales / verticales */
+.ul-circles > li:nth-child(even)::before {
+  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+.ul-circles > li:nth-child(odd)::before {
+  clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
 }
 
-
-
+@media (min-width: 40rem) {
+  .ul-circles {
+    --repeatVal: auto-fit;
+  }
+}
