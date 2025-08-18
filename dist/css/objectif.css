@@ -3,17 +3,8 @@
 
 /* === Section Stage Context Slide === */
 .stage-context-slide {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #eef7f1;
-  font-family: "Inter", system-ui, -apple-system, "Roboto", sans-serif;
-  background: url('../presentationStage/img/context-bg.jpg') center/cover no-repeat;
+  display: block;
+  text-align: center; 
 }
 
 .stage-context-slide .overlay {
@@ -33,7 +24,7 @@
 
 .stage-content {
   display: flex;
-  gap: 2rem;
+  gap: 15vw;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -41,13 +32,12 @@
 }
 
 .stage-block {
-  flex: 1 1 320px;
   text-align: center;
 }
 
 .stage-block h2 {
   margin-bottom: 1.2rem;
-  font-size: 1.7rem;
+  font-size: 1.7rem !important;
   font-weight: 600;
 }
 
@@ -59,10 +49,10 @@
 }
 
 .ul-circles {
-  --innerSize: 6rem; /* taille fixe du cercle */
-  --rimSize: 1rem;
+  --innerSize: 7rem;
+  --rimSize: 2rem;
 
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(var(--repeatVal, auto-fit), minmax(var(--innerSize), 1fr));
   justify-content: center;
   gap: var(--rimSize);
@@ -70,6 +60,8 @@
   padding: var(--rimSize);
   font-family: "Inter", sans-serif;
   list-style: none;
+
+  justify-items: center;
 }
 
 .ul-circles.ul-circles-vertical {
@@ -77,15 +69,17 @@
 }
 
 .ul-circles > li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
+  display: grid;
+  gap: calc(var(--rimSize) / 16);
 
   width: var(--innerSize);
   height: var(--innerSize);  /* fixe la taille pour que le texte ne l’étire pas */
+  aspect-ratio: 1/1;
+  padding: calc(var(--rimSize) / 16);
   border-radius: 50%;
+
+  text-align: center;
+  align-items: center;
   position: relative;
 
   /* Fond blanc derrière le texte */
@@ -99,7 +93,7 @@
   overflow-wrap: break-word;
 
   /* Ombre externe */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
 }
 
 /* Halo et couleur derrière les cercles */
@@ -113,11 +107,25 @@
   border-radius: 50%;
   background: var(--accent-color, #4caf50);
   z-index: -1;
+
+  clip-path: polygon(
+    var(--clipX1, 0%) var(--clipY1, 0%),
+    var(--clipX2, 50%) var(--clipY1, 0%),
+    var(--clipX2, 50%) var(--clipY2, 100%),
+    var(--clipX1, 0%) var(--clipY2, 100%)
+  );
+  box-shadow: inset 2px -2px 10px rgba(255, 255, 255, 0.25),
+    inset -2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reveal .fragment:not(.custom) {
+  will-change: auto !important;
 }
 
 /* Clip alterné pour les lignes horizontales / verticales */
 .ul-circles > li:nth-child(even)::before {
-  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  --clipX1: 50%;
+  --clipX2: 100%;
 }
 .ul-circles > li:nth-child(odd)::before {
   clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
@@ -127,4 +135,33 @@
   .ul-circles {
     --repeatVal: auto-fit;
   }
+  .ul-circles:not(.ul-circles-vertical) > li:nth-child(even)::before {
+    --clipX1: 0%;
+    --clipY1: 0%;
+    --clipX2: 100%;
+    --clipY2: 50%;
+  }
+  .ul-circles:not(.ul-circles-vertical) > li:nth-child(odd)::before {
+    --clipX1: 0%;
+    --clipY1: 50%;
+    --clipX2: 100%;
+    --clipY2: 100%;
+  }
+}
+
+.ul-circles > li::after {
+  width: 100%;
+  background: #fdfdfd;
+  box-shadow: -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 1);
+}
+
+.ul-circles > li > i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  align-self: end;
+}
+
+
+.reveal ul{
+  margin: 0 !important;
 }

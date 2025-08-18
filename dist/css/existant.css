@@ -1,0 +1,107 @@
+.shiny-slide{
+    color: var(--ink);
+    padding: 4vh 6vw;
+    box-sizing: border-box;
+  }
+  
+  .shiny-slide h1{
+    position: relative;
+    z-index: 1;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  .shiny-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  
+  .shiny-points{
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .shiny-points li {
+    --stop: calc(100% / var(--length) * var(--i));
+    --l: 62%;
+    --l2: 88%;
+    --h: calc((var(--i) - 1) * (180 / var(--length)));
+    --c1: hsl(var(--h), 71%, var(--l));
+    --c2: hsl(var(--h), 71%, var(--l2));
+
+    position: relative;
+    counter-increment: list;
+    margin: 2rem auto;
+    padding: 2rem 1rem 1rem;
+    box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    background-color: white;
+    max-height: 10vh;
+    max-width: 40vw;
+}
+
+.shiny-points li::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+}
+
+.shiny-points li h3 {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 1rem;
+    color: rgb(70, 70, 70);
+    font-size: 30px;
+}
+
+.shiny-points li h3::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    content: counter(list);
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--c1);
+    color: white;
+}
+  
+  
+  
+  .shiny-points li::before{
+    position: absolute;
+    font-size: 1.2rem;
+    color: var(--green-2);
+  }
+  
+  .shiny-visual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .shiny-visual svg{
+    max-width: 100%;
+    height: auto;
+  }
+  .shiny-visual figcaption{
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  

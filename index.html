@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="dist/css/timeline.css" />
     <link rel="stylesheet" href="dist/css/ecopar.css" />
     <link rel="stylesheet" href="dist/css/objectif.css" />
+    <link rel="stylesheet" href="dist/css/com_incompre.css" />
+    <link rel="stylesheet" href="dist/css/org.css" />
+    <link rel="stylesheet" href="dist/css/existant.css" />
 
     <!-- overlay global (hors des sections) -->
     <div id="global-hero-overlay" aria-hidden="true"></div>
@@ -52,7 +55,7 @@
           <div class="overlay-sommaire">
             <div class="sommaire-left">
               <img
-                src="../presentationStage/img/treev3good.png"
+                src="./img/treev3good.png"
                 alt="Page de sommaire avec éléments graphiques"
                 .r-stretch
               />
@@ -144,12 +147,12 @@
 
           <section
             class="ecopar-slide"
-            data-bg="../presentationStage/img/ecopar-team.jpg"
+            data-bg="./img/ecopar-team.jpg"
           >
             <!-- background layer (we'll set image from data-bg or inline style) -->
             <div
               class="ecopar-bg"
-              style="background-image: url('../presentationStage/img/team.jpg')"
+              style="background-image: url('./img/team.jpg')"
             ></div>
 
             <!-- dark overlay for contrast -->
@@ -253,32 +256,227 @@
             </div>
           </section>
         </section>
-        <section class="stage-context-slide">
-          <div class="overlay"></div>
-          <h1>Contexte du stage et objectifs</h1>
+        <section>
+          <div class="stage-context-slide">
+            <div class="overlay"></div>
+            <h1>Contexte du stage et objectifs</h1>
 
-          <div class="stage-content">
-            <div class="stage-block">
-              <h2>Limites de l'ancien système</h2>
-              <ul class="ul-circles ul-circles-vertical">
-                <li style="--accent-color: #d3302c">Complexe</li>
-                <li style="--accent-color: #f3a22d">Performance</li>
-                <li style="--accent-color: #495460">Difficile</li>
-                <li style="--accent-color: #2e8b57">Pas adapté</li>
-              </ul>
-            </div>
+            <div class="stage-content">
+              <div class="stage-block">
+                <h2 class="fragment">Limites de l'ancien système</h2>
+                <ul class="ul-circles ul-circles-vertical">
+                  <li class="fragment" style="--accent-color: #d3302c">Performa-nce</li>
+                  <li class="fragment" style="--accent-color: #f3a22d">Complexe</li>
+                  <li class="fragment" style="--accent-color: #495460">Pas adapté</li>
+                </ul>
+              </div>
 
-            <div class="stage-block">
-              <h2>Objectifs du stage</h2>
-              <ul class="ul-circles ul-circles-vertical">
-                <li style="--accent-color: #1e90ff">Optimiser flux</li>
-                <li style="--accent-color: #32cd32">Outils intuitifs</li>
-                <li style="--accent-color: #ff8c00">Meilleure communication</li>
-                <li style="--accent-color: #9370db">Documenter procédures</li>
-              </ul>
+              <div class="stage-block">
+                <h2 class="fragment">Objectifs du stage</h2>
+                <ul class="ul-circles ul-circles-vertical">
+                  <li class="fragment" style="--accent-color: #1e90ff">Ajouter des fonction-nalitées</li>
+                  <li class="fragment" style="--accent-color: #32cd32">Optimiser</li>
+                  <li class="fragment" style="--accent-color: #ff8c00">Documentation</li>
+                  <li class="fragment" style="--accent-color: #9370db">Maintena-ble</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
+        <section>
+        <section class="comm-slide" data-background-transition="fade">
+          <div class="comm-slide"></div>
+          <h1 class="comm-title">L’importance des échanges</h1>
+        
+          <div class="comm-grid">
+        
+            <figure class="comm-visual">
+              <!-- SVG visuel : deux personnes, bulle "MODÈLE", deux interprétations -->
+              <svg viewBox="0 0 800 520" role="img" aria-labelledby="commSvgTitle commSvgDesc">
+                <title id="commSvgTitle">Ambiguïté d’un même mot et importance d’aligner le vocabulaire</title>
+                <desc id="commSvgDesc">
+                  Deux personnes discutent. Au centre, une bulle avec le mot "MODÈLE".
+                  À gauche, une pensée "scientifique"; à droite, une pensée "code".
+                </desc>
+                <defs>
+                  <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#6ecf8f"/>
+                    <stop offset="1" stop-color="#2e8b57"/>
+                  </linearGradient>
+                  <linearGradient id="codeGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#7bdcb5"/>
+                    <stop offset="1" stop-color="#1f6f4f"/>
+                  </linearGradient>
+                  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="6" result="b"/>
+                    <feMerge>
+                      <feMergeNode in="b"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+              
+                <!-- Autres éléments SVG inchangés ... -->
+              
+                <!-- PERSONNE GAUCHE -->
+                <g class="person-left">
+                  <circle cx="140" cy="360" r="36" fill="#e8f7ef" stroke="#2e8b57" stroke-width="3"/>
+                  <rect x="110" y="396" rx="20" ry="20" width="60" height="90" fill="#c8efd9" stroke="#2e8b57" stroke-width="3"/>
+                </g>
+              
+                <!-- PERSONNE DROITE -->
+                <g class="person-right">
+                  <circle cx="660" cy="360" r="36" fill="#e8f7ef" stroke="#2e8b57" stroke-width="3"/>
+                  <rect x="630" y="396" rx="20" ry="20" width="60" height="90" fill="#c8efd9" stroke="#2e8b57" stroke-width="3"/>
+                </g>
+              
+                <!-- BULLE CENTRALE -->
+                <g class="bubble" filter="url(#softGlow)">
+                  <rect x="270" y="220" width="260" height="90" rx="22" fill="white" stroke="#2e8b57" stroke-width="3"/>
+                  <!-- "queues" de bulle vers chaque personne -->
+                  <path d="M300,310 C260,350 210,350 176,372" fill="none" stroke="#2e8b57" stroke-width="3"/>
+                  <path d="M500,310 C540,350 590,350 624,372" fill="none" stroke="#2e8b57" stroke-width="3"/>
+                  <text x="400" y="278" text-anchor="middle" font-size="28" font-weight="800" fill="#1b3b2f" style="letter-spacing:1px">MODÈLE</text>
+                  <text x="400" y="302" text-anchor="middle" font-size="14" fill="#2e8b57">un mot, deux visions</text>
+                </g>
+              
+                <!-- PENSÉE GAUCHE (science - modèle scientifique) -->
+                <g class="thought-left">
+                  <!-- Nuage -->
+                  <ellipse cx="210" cy="120" rx="110" ry="70" fill="url(#leafGrad)" opacity="0.2"/>
+                  <ellipse cx="160" cy="160" rx="14" ry="10" fill="url(#leafGrad)" opacity="0.25"/>
+                  <ellipse cx="185" cy="175" rx="8" ry="6" fill="url(#leafGrad)" opacity="0.3"/>
+                  <!-- Représentation de modèle scientifique -->
+                  <rect x="160" y="100" width="100" height="20" rx="5" fill="#e0f2f1" stroke="#1f6f4f" stroke-width="2"/>
+                  <text x="210" y="115" text-anchor="middle" font-size="10" fill="#1f6f4f">y = mx + b</text>
+                  <text x="210" y="80" text-anchor="middle" font-size="14" fill="#1f6f4f">scientifique</text>
+                </g>
+              
+                <!-- PENSÉE DROITE (technique - code/base de données) -->
+                <g class="thought-right">
+                  <!-- Nuage -->
+                  <ellipse cx="590" cy="120" rx="110" ry="70" fill="url(#codeGrad)" opacity="0.2"/>
+                  <ellipse cx="640" cy="160" rx="14" ry="10" fill="url(#codeGrad)" opacity="0.25"/>
+                  <ellipse cx="615" cy="175" rx="8" ry="6" fill="url(#codeGrad)" opacity="0.3"/>
+                  <!-- Représentation de code -->
+                  <rect x="540" y="95" width="110" height="50" rx="5" fill="#e0f2f1" stroke="#1f6f4f" stroke-width="2"/>
+                  <text x="590" y="110" text-anchor="middle" font-size="10" fill="#1f6f4f">CREATE TABLE test (</text>
+                  <text x="590" y="120" text-anchor="middle" font-size="10" fill="#1f6f4f"> id: integer;</text>
+                  <text x="590" y="130" text-anchor="middle" font-size="10" fill="#1f6f4f"> name: text;</text>
+                  <text x="590" y="80" text-anchor="middle" font-size="14" fill="#1f6f4f">technique</text>
+                </g>
+              
+                <!-- Liaisons pointillées vers les pensées -->
+                <g stroke="#2e8b57" stroke-width="2" opacity="0.5">
+                  <path d="M175,360 C180,300 185,250 200,190" stroke-dasharray="4 8" fill="none"/>
+                  <path d="M625,360 C620,300 615,250 600,190" stroke-dasharray="4 8" fill="none"/>
+                </g>
+              </svg>
+              
+            </figure>
+          </div>
+        </section>
+        <section class="org-slide">
+          <div class="org-slide">
+          <div class="org-bg"></div>
+        
+          <h1>Une organisation structurée et itérative</h1>
+        
+          <div class="org-grid">
+            <!-- Colonne gauche : points -->
+            <ul class="org-points">
+              <li class="fragment">Réunions hebdomadaires pour suivi de l’avancement.</li>
+              <li class="fragment">Revues de code pour validation technique.</li>
+              <li class="fragment">Validation régulière par les utilisateurs finaux</li>
+              <li class="fragment">Ajustements continus selon les retours.</li>
+            </ul>
+        
+            <!-- Colonne droite : schéma boucle agile -->
+            <figure class="org-visual fragment">
+              <svg viewBox="0 0 740 520" role="img" aria-label="Boucle agile: Discussion → Développement → Revue technique → Validation utilisateur → Discussion">
+                <!-- définitions -->
+                <defs>
+                  <linearGradient id="ring" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#6ecf8f"/>
+                    <stop offset="100%" stop-color="#2e8b57"/>
+                  </linearGradient>
+                  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f2a20" flood-opacity="0.15"/>
+                  </filter>
+                  <marker id="arrow" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#2e8b57"></path>
+                  </marker>
+                </defs>
+
+                <g class="step" transform="translate(370,260)">
+                  <circle r="200" fill="none" stroke="#2e8b57" stroke-width="4"></circle>
+                </g>
+              
+                <!-- flèches -->
+                <g fill="none" stroke="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- Flèche de Discussion à Développement -->
+                  <path d="M425 67 Q540 120 558 190" marker-end="url(#arrow)"></path>
+                  <!-- Flèche de Développement à Revue tech -->
+                  <path d="M560 324 Q550 400 435 449" marker-end="url(#arrow)"></path>
+                  <!-- Flèche de Revue tech à Validation -->
+                  <path d="M300 445 Q240 440 183 330" marker-end="url(#arrow)"></path>
+                  <!-- Flèche de Validation à Discussion -->
+                  <path d="M180 198 Q193 130 294 75" marker-end="url(#arrow)"></path>
+                </g>
+              
+                <!-- étapes -->
+                <g class="step" transform="translate(365,70)">
+                  <circle r="60" fill="#ffffff" stroke="#6ecf8f" stroke-width="4"></circle>
+                  <text text-anchor="middle" y="7" font-size="14" fill="#0f2a20">Discussion</text>
+                </g>
+              
+                <g class="step" transform="translate(555,260)">
+                  <circle r="60" fill="#ffffff" stroke="#6ecf8f" stroke-width="4"></circle>
+                  <text text-anchor="middle" y="7" font-size="14" fill="#0f2a20">Développement</text>
+                </g>
+              
+                <g class="step" transform="translate(365,460)">
+                  <circle r="60" fill="#ffffff" stroke="#6ecf8f" stroke-width="4"></circle>
+                  <text text-anchor="middle" y="7" font-size="14" fill="#0f2a20">Revue tech</text>
+                </g>
+              
+                <g class="step" transform="translate(175,260)">
+                  <circle r="60" fill="#ffffff" stroke="#6ecf8f" stroke-width="4"></circle>
+                  <text text-anchor="middle" y="7" font-size="14" fill="#0f2a20">Validation</text>
+                </g>
+              
+              </svg>
+              
+            </figure>
+          </div>
+        </div>
+        </section>
+        
+      </section>
+
+      <section class="shiny-slide">
+        <h1>Une logique centralisée</h1>
+        <div class="shiny-grid">
+            <!-- Bullets -->
+            <ol class="shiny-points" style="--length: 2" role="list">
+                <li style="--i: 1" class="fragment">
+                    <h3>Toute la logique concentrée dans 2 fichiers principaux.</h3>
+                </li>
+                <li style="--i: 2" class="fragment">
+                    <h3>Manque de modularité</h3>
+                </li>
+            </ol>
+    
+            <!-- Ton schéma -->
+            <figure class="shiny-visual">
+                <img src="./img/R-shiny.png" alt="Schéma des échanges avec la base de données" />
+                <figcaption>Un flux complexe centralisé entre ui.R, server.R et la base</figcaption>
+            </figure>
+        </div>
+    </section>
+         
+      
+        
       </div>
     </div>
 

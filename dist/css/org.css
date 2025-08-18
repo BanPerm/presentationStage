@@ -1,0 +1,127 @@
+:root{
+    --green-1:#6ecf8f;
+    --green-2:#2e8b57;
+    --ink:#0f2a20;
+    --muted:#e8f5ee;
+  }
+  
+  /* Slide plein écran structurée en grille */
+  .org-slide{
+    color: var(--ink);
+    padding: 4vh 6vw;
+    box-sizing: border-box;
+  }
+  
+  /* Fond pattern doux (nature) */
+  .org-slide .org-bg{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.7;
+  }
+  
+  /* Titre */
+  .org-slide h1{
+    position: relative;
+    z-index: 1;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Grille contenu */
+  .org-grid{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr; /* bullets / visuel */
+    gap: clamp(24px, 4vw, 64px);
+    align-items: center;
+    height: fit-content;
+  }
+  
+  /* Bullets */
+  .org-points{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+  }
+  
+  .org-points li{
+    background: linear-gradient(135deg, #ffffffdd, #f7fffadd);
+    border: none;
+    padding: 1rem 1.2rem 1rem 3rem; /* on décale pour l’icône */
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  /* Petites pastilles vertes comme icône */
+.org-points li::before{
+    content: "✔";
+    position: absolute;
+    left: 1rem;
+    font-size: 1.2rem;
+    color: var(--green-2);
+  }
+  
+  /* Hover dynamique */
+  .org-points li:hover{
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+  
+  /* Visuel */
+  .org-visual{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+  }
+  
+  .org-visual svg{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  
+  .org-visual figcaption{
+    font-size: 0.95rem;
+    color: #173c2e;
+    opacity: 0.8;
+  }
+  
+  /* Micro-animations discrètes */
+  .org-visual .step circle{
+    transition: transform 300ms ease, fill 300ms ease;
+  }
+  .org-visual .step:hover circle{
+    transform: scale(1.06);
+    fill: #f7fffb;
+  }
+  
+  /* Responsive */
+  @media (max-width: 980px){
+    .org-grid{
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      align-items: start;
+    }
+    .org-visual svg{
+      max-width: 90%;
+      max-height: 60vh;
+    }
+  }
+  

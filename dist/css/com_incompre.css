@@ -1,0 +1,87 @@
+:root{
+    --green-1:#6ecf8f;
+    --green-2:#2e8b57;
+    --ink:#0f2a20;        /* texte principal (noir/vert sombre) */
+    --muted:#e8f5ee;
+  }
+  
+  /* section plein écran, centrée */
+  .comm-slide {
+    color: var(--ink);
+    padding: 4vh 6vw;
+    box-sizing: border-box;
+  }
+  
+  .comm-slide h1{
+    position: relative;
+    z-index: 1;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* grille contenu : points à gauche, visuel à droite */
+  .comm-grid{
+    display: grid;
+    align-items: center;
+    gap: clamp(20px, 4vw, 56px);
+  }
+  
+  /* bullets */
+  .comm-points{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+  }
+  
+  .comm-points li{
+    background: #ffffffc7;
+    border: 1px solid rgba(46,139,87,0.15);
+    border-left: 6px solid var(--green-2);
+    padding: 1rem 1.2rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    backdrop-filter: saturate(1.1);
+  }
+  
+  /* visuel svg */
+  .comm-visual{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .comm-visual svg{
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+  }
+  
+  /* petites animations discrètes (reveal s’occupe des fragments) */
+  .comm-visual .bubble text:first-of-type{
+    animation: pulseScale 3s ease-in-out infinite;
+    transform-origin: 400px 278px;
+  }
+  
+  @keyframes pulseScale{
+    0%,100%{ transform: scale(1); opacity: 1; }
+    50%{ transform: scale(1.03); opacity: 0.9; }
+  }
+  
+  /* responsive: pile les blocs en vertical */
+  @media (max-width: 900px){
+    .comm-grid{
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+    .comm-visual svg{
+      width: 100%;
+    }
+  }
+  
