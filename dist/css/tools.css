@@ -1,0 +1,43 @@
+.practice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 500px; /* largeur centrée */
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .practice-list li {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .practice-list li i {
+    flex-shrink: 0;
+    font-size: 1.2em;
+    margin-right: 12px;
+  }
+
+  .practice-list li span {
+    color: #6c757d;
+    font-size: 0.9em;
+  }
+
+  /* Survol pour effet visuel */
+  .practice-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  /* Centrage horizontal de la zone globale */
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
