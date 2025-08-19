@@ -1,0 +1,9 @@
+.shiny-visual.centered {
+    text-align: center;
+  }
+  
+  .shiny-visual.centered img {
+    max-width: 70%;   /* réduit un peu l’image si elle est trop grande */
+    border-radius: 6px;
+  }
+  
