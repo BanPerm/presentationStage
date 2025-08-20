@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="dist/css/circular_deps.css" />
     <link rel="stylesheet" href="dist/css/old_croptraits.css" />
     <link rel="stylesheet" href="dist/css/tools.css" />
+    <link rel="stylesheet" href="dist/css/feature.css" />
 
     <!-- overlay global (hors des sections) -->
     <div id="global-hero-overlay" aria-hidden="true"></div>
@@ -73,7 +74,6 @@
                 <li data-slide="1">Contexte et présentation</li>
                 <li data-slide="2">L'existant</li>
                 <li data-slide="3">Mise en place du projet</li>
-                <li data-slide="4">Résultats et perspectives</li>
                 <li data-slide="5">Démo de l'application</li>
                 <li data-slide="6">Bilan et conclusion</li>
               </ul>
@@ -83,6 +83,10 @@
 
         <!--%%%%%%%%%%%%%% Contexte et présentation %%%%%%%%%%%%%%-->
         <section>
+          <section class="shiny-slide">
+            <h1 style="font-size: 3em">Présentation</h1>
+          </section>
+
           <section class="evolution-cefe">
             <div class="evo-inner">
               <h1>De 1961 à <span>aujourd'hui</span></h1>
@@ -93,10 +97,11 @@
                   <div class="timeline-content">
                     <h3>1961 — Fondation (CEPE)</h3>
                     <p>
-                      Le 1er juillet 1961 est créé le Centre d’Études
-                      Phytosociologiques et Écologiques (CEPE), berceau
-                      historique des activités aujourd’hui conduites par le
-                      CEFE.
+                      Le Centre d’Études Phytosociologiques et Écologiques
+                      (CEPE), ancêtre du CEFE, a été fondé en 1961 par Louis
+                      Emberger, avec pour objectif initial l’étude des
+                      associations végétales et la cartographie de la
+                      végétation.
                     </p>
                   </div>
                 </article>
@@ -116,12 +121,11 @@
                 <article class="timeline-block left fragment">
                   <div class="marker" aria-hidden="true">🔁</div>
                   <div class="timeline-content">
-                    <h3>1987–1988 — De CEPE à CEFE</h3>
+                    <h3>1988 — De CEPE à CEFE</h3>
                     <p>
                       Le CEPE devient le Centre d’Écologie Fonctionnelle et
-                      Évolutive (CEFE) à la fin des années 1980, recentrant la
-                      mission sur l’écologie fonctionnelle et évolutive.
-                      (sources historiques indiquent 1987–1988 selon archives).
+                      Évolutive (CEFE), marquant un recentrage scientifique vers
+                      l’écologie fonctionnelle et évolutive.
                     </p>
                   </div>
                 </article>
@@ -131,10 +135,10 @@
                   <div class="timeline-content">
                     <h3>UMR 5175 & tutelles</h3>
                     <p>
-                      Le CEFE est aujourd’hui UMR 5175, rassemblant plusieurs
-                      tutelles académiques (CNRS, Université de Montpellier,
-                      EPHE, IRD… selon période) et joue un rôle central dans la
-                      recherche en écologie à Montpellier.
+                      Le CEFE est devenu une UMR (UMR 5175) en 2003, avec
+                      aujourd’hui quatre tutelles principales (CNRS, EPHE, IRD,
+                      Université de Montpellier) et trois partenaires
+                      secondaires (Institut Agro, INRAE, UPV).
                     </p>
                   </div>
                 </article>
@@ -144,10 +148,10 @@
                   <div class="timeline-content">
                     <h3>Sujets majeurs</h3>
                     <p>
-                      Thèmes : dynamique et fonctionnement des organismes,
-                      biodiversité, changements environnementaux à grande
-                      échelle, écologie évolutive et approches multi-échelles —
-                      du gène au paysage.
+                      Les recherches du CEFE couvrent des thèmes majeurs tels
+                      que la dynamique de la biodiversité, les changements
+                      environnementaux, l’écologie évolutive et comportementale,
+                      avec des approches multi-échelles et interdisciplinaires.
                     </p>
                   </div>
                 </article>
@@ -251,48 +255,6 @@
                   <div class="icon">🧬</div>
                   <div class="number">288</div>
                   <div class="label">Taxons</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="stage-context-slide">
-              <div class="overlay"></div>
-              <h1>Contexte du stage et objectifs</h1>
-
-              <div class="stage-content">
-                <div class="stage-block">
-                  <h2 class="fragment">Limites de l'ancien système</h2>
-                  <ul class="ul-circles ul-circles-vertical">
-                    <li class="fragment" style="--accent-color: #d3302c">
-                      Performa-nce
-                    </li>
-                    <li class="fragment" style="--accent-color: #f3a22d">
-                      Complexe
-                    </li>
-                    <li class="fragment" style="--accent-color: #495460">
-                      Pas adapté
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="stage-block">
-                  <h2 class="fragment">Objectifs du stage</h2>
-                  <ul class="ul-circles ul-circles-vertical">
-                    <li class="fragment" style="--accent-color: #1e90ff">
-                      Ajouter des fonction-nalitées
-                    </li>
-                    <li class="fragment" style="--accent-color: #32cd32">
-                      Optimiser
-                    </li>
-                    <li class="fragment" style="--accent-color: #ff8c00">
-                      Documentation
-                    </li>
-                    <li class="fragment" style="--accent-color: #9370db">
-                      Maintena-ble
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -766,7 +728,53 @@
           </section>
         </section>
 
+        <!--%%%%%%%%%%%%%% L'existant %%%%%%%%%%%%%%-->
         <section>
+          <section class="shiny-slide">
+            <h1 style="font-size: 3em">L'existant</h1>
+          </section>
+
+          <section>
+            <div class="stage-context-slide">
+              <div class="overlay"></div>
+              <h1>Contexte du stage et objectifs</h1>
+              <div class="stage-content">
+                <div class="stage-block">
+                  <h2 class="fragment">Limites de l'ancien système</h2>
+                  <ul class="ul-circles ul-circles-vertical">
+                    <li class="fragment" style="--accent-color: #d3302c">
+                      Performa-nce
+                    </li>
+                    <li class="fragment" style="--accent-color: #f3a22d">
+                      Complexe
+                    </li>
+                    <li class="fragment" style="--accent-color: #495460">
+                      Pas adapté
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="stage-block">
+                  <h2 class="fragment">Objectifs du stage</h2>
+                  <ul class="ul-circles ul-circles-vertical">
+                    <li class="fragment" style="--accent-color: #1e90ff">
+                      Ajouter des fonction-nalitées
+                    </li>
+                    <li class="fragment" style="--accent-color: #32cd32">
+                      Optimiser
+                    </li>
+                    <li class="fragment" style="--accent-color: #ff8c00">
+                      Documentation
+                    </li>
+                    <li class="fragment" style="--accent-color: #9370db">
+                      Maintena-ble
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section class="shiny-slide">
             <h1>Une logique centralisée</h1>
             <div class="shiny-grid">
@@ -852,9 +860,12 @@
           </section>
         </section>
 
+        <!--%%%%%%%%%%%%%% Mise en place du projet %%%%%%%%%%%%%%-->
         <section>
           <section class="shiny-slide">
-            <h1>Réalisation et mise en place du projet</h1>
+            <h1 style="font-size: 3em">
+              Réalisation et mise en place du projet
+            </h1>
             <figure class="shiny-visual centered">
               <img src="./img/iteratif.jpg" alt="Projet itératif" />
               <figcaption>
@@ -1052,7 +1063,7 @@
         <section>
           <section class="shiny-slide">
             <h1>Organisation du code</h1>
-            <p style="margin-top: 1em; text-align: center; min-width: 100vw">
+            <p style="margin-top: 1em; text-align: center; min-width: 88vw">
               Vue d'ensemble de la structure du projet
             </p>
 
@@ -1077,21 +1088,24 @@
                     flex-direction: column;
                   "
                 >
-                <span class="fragment" style="color:#1f77b4;">project-frontend/</span>
-                <span class="fragment" style="margin-left:20px; color:#ff7f0e;">features/</span>
-                <span class="fragment" style="margin-left:40px; color:#2ca02c;">components/</span>
-                <span class="fragment" style="margin-left:40px; color:#2ca02c;">api.ts</span>
-                <span class="fragment" style="margin-left:40px; color:#2ca02c;">types.ts</span>
-                <span class="fragment" style="margin-left:40px; color:#2ca02c;">assets/</span>
-                <span class="fragment" style="margin-left:40px; color:#2ca02c;">index.ts</span>
-                <span class="fragment" style="margin-left:20px; color:#d62728;">components/</span>
-                <span class="fragment" style="margin-left:20px; color:#9467bd;">pages/</span>
-                <span class="fragment" style="margin-left:20px; color:#8c564b;">constants/</span>
-                <span class="fragment" style="margin-left:20px; color:#e377c2;">context/</span>
-                <span class="fragment" style="margin-left:20px; color:#7f7f7f;">hooks/</span>
-                <span class="fragment" style="margin-left:20px; color:#bcbd22;">layout/</span>
-                <span class="fragment" style="margin-left:20px; color:#17becf;">types/</span>
-              </pre>
+                    <span class="fragment" data-fragment-index="1" style="color:#1f77b4;">project-frontend/</span>
+                    <span class="fragment" data-fragment-index="1" style="margin-left:20px; color:#ff7f0e;">features/</span>
+
+                    <!-- enfants de features -->
+                    <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">components/</span>
+                    <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">api.ts</span>
+                    <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">types.ts</span>
+                    <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">assets/</span>
+                    <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">index.ts</span>
+
+                    <span class="fragment" data-fragment-index="3" style="margin-left:20px; color:#d61e1e;">components/</span>
+                    <span class="fragment" data-fragment-index="3" style="margin-left:20px; color:#d61e1e;">pages/</span>
+                    <span class="fragment" data-fragment-index="3" style="margin-left:20px; color:#d61e1e;">constants/</span>
+                    <span class="fragment" data-fragment-index="3" style="margin-left:20px; color:#d61e1e;">context/</span>
+                    <span class="fragment" data-fragment-index="3" style="margin-left:20px; color:#d61e1e;">hooks/</span>
+                    <span class="fragment" data-fragment-index="3" style="margin-left:20px; color:#d61e1e;">layout/</span>
+                    <span class="fragment" data-fragment-index="3" style="margin-left:20px; color:#d61e1e;">types/</span>
+                  </pre>
               </div>
 
               <!-- Backend -->
@@ -1106,21 +1120,28 @@
                     flex-direction: column;
                   "
                 >
-                <span class="fragment" style="color:#1f77b4;">project-backend/</span>
-                <span class="fragment" style="margin-left:20px; color:#ff7f0e;">api/routes/</span>
-                <span class="fragment" style="margin-left:20px; color:#2ca02c;">auth/</span>
-                <span class="fragment" style="margin-left:20px; color:#d62728;">config/</span>
-                <span class="fragment" style="margin-left:20px; color:#9467bd;">core/</span>
-                <span class="fragment" style="margin-left:20px; color:#8c564b;">exceptions/</span>
-                <span class="fragment" style="margin-left:20px; color:#e377c2;">jobs/</span>
-                <span class="fragment" style="margin-left:20px; color:#7f7f7f;">middleware/</span>
-                <span class="fragment" style="margin-left:20px; color:#bcbd22;">models/</span>
-                <span class="fragment" style="margin-left:20px; color:#17becf;">repository/</span>
-                <span class="fragment" style="margin-left:20px; color:#aec7e8;">schemas/</span>
-                <span class="fragment" style="margin-left:20px; color:#ffbb78;">services/</span>
-                <span class="fragment" style="margin-left:20px; color:#98df8a;">sql/</span>
-                <span class="fragment" style="margin-left:20px; color:#ff9896;">utils/</span>
-                <span class="fragment" style="margin-left:20px; color:#c5b0d5;">docs/</span>
+                <span class="fragment" data-fragment-index="4" style="color:#1f77b4;">project-backend/</span>
+
+                <span class="fragment" data-fragment-index="5" style="margin-left:20px; color:#ff7f0e;">api/routes/</span>
+
+                <span class="fragment" data-fragment-index="6" style="margin-left:20px; color:#2ca02c;">auth/</span>
+                <span class="fragment" data-fragment-index="6" style="margin-left:20px; color:#2ca02c;">config/</span>
+                <span class="fragment" data-fragment-index="6" style="margin-left:20px; color:#2ca02c;">core/</span>
+
+                <span class="fragment" data-fragment-index="7" style="margin-left:20px; color:#d62728;">exceptions/</span>
+                <span class="fragment" data-fragment-index="7" style="margin-left:20px; color:#d62728;">jobs/</span>
+                <span class="fragment" data-fragment-index="7" style="margin-left:20px; color:#d62728;">middleware/</span>
+
+                <span class="fragment" data-fragment-index="8" style="margin-left:20px; color:#9467bd;">models/</span>
+                <span class="fragment" data-fragment-index="8" style="margin-left:20px; color:#9467bd;">schemas/</span>
+
+                <span class="fragment" data-fragment-index="9" style="margin-left:20px; color:#8c564b;">repository/</span>
+                <span class="fragment" data-fragment-index="9" style="margin-left:20px; color:#8c564b;">services/</span>
+
+                <span class="fragment" data-fragment-index="10" style="margin-left:20px; color:#e377c2;">sql/</span>
+                <span class="fragment" data-fragment-index="10" style="margin-left:20px; color:#e377c2;">utils/</span>
+                <span class="fragment" data-fragment-index="10" style="margin-left:20px; color:#e377c2;">docs/</span>
+
               </pre>
               </div>
             </div>
@@ -1168,7 +1189,7 @@
             </div>
           </section>
           <section data-auto-animate class="shiny-slide">
-            <h1 data-id="code-title">Documentation vivante</h1>
+            <h1 data-id="code-title">Documentation</h1>
             <pre data-id="code-animation"><code class="hljs python" data-trim>
           def fetch_user(id: int) -> User:
               """Récupère un utilisateur depuis la base de données."""
@@ -1176,7 +1197,7 @@
           </section>
 
           <section data-auto-animate class="shiny-slide">
-            <h1 data-id="code-title">Documentation vivante</h1>
+            <h1 data-id="code-title">Documentation</h1>
             <pre data-id="code-animation"><code class="hljs python" data-trim>
           def fetch_user(id: int) -> User:
               """
@@ -1189,7 +1210,7 @@
           </section>
 
           <section data-auto-animate class="shiny-slide">
-            <h1 data-id="code-title">Documentation vivante</h1>
+            <h1 data-id="code-title">Documentation</h1>
             <pre data-id="code-animation"><code class="hljs python" data-trim>
           def fetch_user(id: int) -> User:
               """
@@ -1205,27 +1226,27 @@
           </section>
 
           <section data-auto-animate class="shiny-slide">
-            <h1 data-id="code-title">Documentation vivante</h1>
+            <h1 data-id="code-title">Documentation</h1>
             <pre data-id="code-animation"><code class="hljs python" data-trim>
-          def fetch_user(id: int) -> User:
-              """
-              Récupère un utilisateur depuis la base de données.
-          
-              Args:
-                  id (int): Identifiant unique de l’utilisateur.
-          
-              Raises:
-                  UserNotFoundError: si l’utilisateur n’existe pas.
-          
-              Returns:
-                  User: Objet utilisateur correspondant.
-              """
+            def fetch_user(id: int) -> User:
+                """
+                Récupère un utilisateur depuis la base de données.
+            
+                Args:
+                    id (int): Identifiant unique de l’utilisateur.
+            
+                Raises:
+                    UserNotFoundError: si l’utilisateur n’existe pas.
+            
+                Returns:
+                    User: Objet utilisateur correspondant.
+                """
           </code></pre>
           </section>
 
           <!-- Dernière étape : capture pdoc -->
           <section data-auto-animate class="shiny-slide">
-            <h1 data-id="code-title">Documentation vivante</h1>
+            <h1 data-id="code-title">Documentation</h1>
             <div style="text-align: center; margin-top: 20px">
               <img
                 src="img/pdoc.png"
@@ -1317,6 +1338,116 @@
                 </p>
               </div>
             </div>
+          </section>
+
+          <section class="shiny-slide">
+            <h1>Cycle de développement</h1>
+            <div style="text-align: center">
+              <img
+                src="img/CI-CD.jpg"
+                alt="Cycle CI/CD"
+                style="
+                  max-width: 75%;
+                  border-radius: 12px;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                "
+              />
+            </div>
+          </section>
+
+          <!-- Slide 5 — Qualité & Sécurité : CI/CD -->
+          <section data-auto-animate class="shiny-slide">
+            <h1 style="margin-bottom: 0.5em">Cycle de développement</h1>
+
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                align-items: flex-start;
+              "
+            >
+              <!-- CI/CD -->
+              <div class="fragment" style="width: 100%">
+                <h3
+                  style="font-size: 1.3em; color: #1f77b4; margin-bottom: 0.5em"
+                >
+                  CI/CD
+                </h3>
+                <pre
+                  data-id="cicd-code"
+                  style="
+                    font-size: 0.6em;
+                    max-height: 35vh;
+                    width: 70vw;
+                    overflow: auto;
+                  "
+                >
+                <code class="hljs yaml" data-trim><script type="text/template">
+                stages:
+                  - build
+
+                build:
+                  stage: build
+                  only:
+                    - development
+                  tags:
+                    - linux
+                  environment:
+                    dev
+                  script:
+                    - ./generate_env.sh
+                    - |
+                      (
+                        export POSTGRES_USER="$DB_USER";\
+                        export POSTGRES_PASSWORD="$DB_PASSWORD";\
+                        export POSTGRES_DB="$DB";\
+                        sudo docker-compose up -d --build
+                      )
+                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/01_CropTraits.sql
+                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/02_change.sql
+                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/03_rename.sql
+                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/04_create_user.sql
+                        </script></code>
+                      </pre>
+              </div>
+
+              <!-- Dockerisation -->
+              <div class="fragment" style="width: 100%">
+                <h3
+                  style="font-size: 1.3em; color: #ff7f0e; margin-bottom: 0.5em"
+                >
+                  Dockerisation
+                </h3>
+                <pre
+                  style="
+                    font-size: 0.6em;
+                    max-height: 30vh;
+                    width: 70vw;
+                    overflow: auto;
+                  "
+                >
+                    <code class="hljs dockerfile"><script type="text/template">
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "main.py"]
+                  </script></code>
+               </pre>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!--%%%%%%%%%%%%%% Feature %%%%%%%%%%%%%%-->
+
+        <section>
+          <section class="shiny-slide">
+            <h1 style="font-size: 4em">
+              Fonctionnalités principales => Demo (Comming soon)
+            </h1>
           </section>
         </section>
       </div>
