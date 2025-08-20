@@ -39,6 +39,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
+        <!--%%%%%%%%%%%%%% Hero Page %%%%%%%%%%%%%%-->
         <section
           class="hero-slide hero-fill"
           data-background="https://images.pexels.com/photos/4406172/pexels-photo-4406172.jpeg"
@@ -54,6 +55,8 @@
           </div>
         </section>
 
+        <!--%%%%%%%%%%%%%% Sommaire %%%%%%%%%%%%%%-->
+
         <section id="sommaire-page">
           <div class="overlay-sommaire">
             <div class="sommaire-left">
@@ -68,13 +71,17 @@
               <h2>Sommaire</h2>
               <ul class="sommaire-list">
                 <li data-slide="1">Contexte et présentation</li>
-                <li data-slide="2">Travaux réalisés</li>
-                <li data-slide="3">Résultats et perspectives</li>
-                <li data-slide="4">Bilan et conclusion</li>
+                <li data-slide="2">L'existant</li>
+                <li data-slide="3">Mise en place du projet</li>
+                <li data-slide="4">Résultats et perspectives</li>
+                <li data-slide="5">Démo de l'application</li>
+                <li data-slide="6">Bilan et conclusion</li>
               </ul>
             </div>
           </div>
         </section>
+
+        <!--%%%%%%%%%%%%%% Contexte et présentation %%%%%%%%%%%%%%-->
         <section>
           <section class="evolution-cefe">
             <div class="evo-inner">
@@ -246,58 +253,51 @@
                   <div class="label">Taxons</div>
                 </div>
               </div>
+            </div>
+          </section>
 
-              <div class="visualization">
-                <img
-                  src="https://shiny.cefe.cnrs.fr/CropTrait/"
-                  alt="Interface de CropTraits"
-                />
+          <section>
+            <div class="stage-context-slide">
+              <div class="overlay"></div>
+              <h1>Contexte du stage et objectifs</h1>
+
+              <div class="stage-content">
+                <div class="stage-block">
+                  <h2 class="fragment">Limites de l'ancien système</h2>
+                  <ul class="ul-circles ul-circles-vertical">
+                    <li class="fragment" style="--accent-color: #d3302c">
+                      Performa-nce
+                    </li>
+                    <li class="fragment" style="--accent-color: #f3a22d">
+                      Complexe
+                    </li>
+                    <li class="fragment" style="--accent-color: #495460">
+                      Pas adapté
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="stage-block">
+                  <h2 class="fragment">Objectifs du stage</h2>
+                  <ul class="ul-circles ul-circles-vertical">
+                    <li class="fragment" style="--accent-color: #1e90ff">
+                      Ajouter des fonction-nalitées
+                    </li>
+                    <li class="fragment" style="--accent-color: #32cd32">
+                      Optimiser
+                    </li>
+                    <li class="fragment" style="--accent-color: #ff8c00">
+                      Documentation
+                    </li>
+                    <li class="fragment" style="--accent-color: #9370db">
+                      Maintena-ble
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
-        </section>
-        <section>
-          <div class="stage-context-slide">
-            <div class="overlay"></div>
-            <h1>Contexte du stage et objectifs</h1>
 
-            <div class="stage-content">
-              <div class="stage-block">
-                <h2 class="fragment">Limites de l'ancien système</h2>
-                <ul class="ul-circles ul-circles-vertical">
-                  <li class="fragment" style="--accent-color: #d3302c">
-                    Performa-nce
-                  </li>
-                  <li class="fragment" style="--accent-color: #f3a22d">
-                    Complexe
-                  </li>
-                  <li class="fragment" style="--accent-color: #495460">
-                    Pas adapté
-                  </li>
-                </ul>
-              </div>
-
-              <div class="stage-block">
-                <h2 class="fragment">Objectifs du stage</h2>
-                <ul class="ul-circles ul-circles-vertical">
-                  <li class="fragment" style="--accent-color: #1e90ff">
-                    Ajouter des fonction-nalitées
-                  </li>
-                  <li class="fragment" style="--accent-color: #32cd32">
-                    Optimiser
-                  </li>
-                  <li class="fragment" style="--accent-color: #ff8c00">
-                    Documentation
-                  </li>
-                  <li class="fragment" style="--accent-color: #9370db">
-                    Maintena-ble
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
           <section class="comm-slide" data-background-transition="fade">
             <div class="comm-slide"></div>
             <h1 class="comm-title">L’importance des échanges</h1>
@@ -1050,8 +1050,8 @@
         </section>
 
         <section>
-          <section>
-            <h2>Organisation du code</h2>
+          <section class="shiny-slide">
+            <h1>Organisation du code</h1>
             <p style="margin-top: 1em; text-align: center; min-width: 100vw">
               Vue d'ensemble de la structure du projet
             </p>
@@ -1125,43 +1125,197 @@
               </div>
             </div>
           </section>
-          <section>
-            <h2>Bonnes pratiques & socle solide</h2>
+          <section class="shiny-slide">
+            <h1>Bonnes pratiques & socle solide</h1>
+            <div style="display: flex">
+              <div style="text-align: center; margin-bottom: 20px">
+                <img
+                  id="practice-image"
+                  src="images/logger.png"
+                  alt="Aperçu"
+                  style="
+                    max-height: 50vh;
+                    border-radius: 8px;
+                    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+                  "
+                />
+              </div>
+              <div class="slide-content">
+                <ul class="practice-list">
+                  <li class="fragment" data-index="0">
+                    <i
+                      class="fa-solid fa-file-lines"
+                      style="color: #4dabf7"
+                    ></i>
+                    <div>Logger</div>
+                  </li>
+                  <li class="fragment" data-index="1">
+                    <i
+                      class="fa-solid fa-chart-line"
+                      style="color: #51cf66"
+                    ></i>
+                    <div>Monitoring</div>
+                  </li>
+                  <li class="fragment" data-index="2">
+                    <i
+                      class="fa-solid fa-triangle-exclamation"
+                      style="color: #ff922b"
+                    ></i>
+                    <div>Exception handler</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate class="shiny-slide">
+            <h1 data-id="code-title">Documentation vivante</h1>
+            <pre data-id="code-animation"><code class="hljs python" data-trim>
+          def fetch_user(id: int) -> User:
+              """Récupère un utilisateur depuis la base de données."""
+          </code></pre>
+          </section>
 
-            <!-- Zone fixe pour l’image -->
-            <div style="text-align: center; margin-bottom: 20px">
+          <section data-auto-animate class="shiny-slide">
+            <h1 data-id="code-title">Documentation vivante</h1>
+            <pre data-id="code-animation"><code class="hljs python" data-trim>
+          def fetch_user(id: int) -> User:
+              """
+              Récupère un utilisateur depuis la base de données.
+          
+              Args:
+                  id (int): Identifiant unique de l’utilisateur.
+              """
+          </code></pre>
+          </section>
+
+          <section data-auto-animate class="shiny-slide">
+            <h1 data-id="code-title">Documentation vivante</h1>
+            <pre data-id="code-animation"><code class="hljs python" data-trim>
+          def fetch_user(id: int) -> User:
+              """
+              Récupère un utilisateur depuis la base de données.
+          
+              Args:
+                  id (int): Identifiant unique de l’utilisateur.
+          
+              Raises:
+                  UserNotFoundError: si l’utilisateur n’existe pas.
+              """
+          </code></pre>
+          </section>
+
+          <section data-auto-animate class="shiny-slide">
+            <h1 data-id="code-title">Documentation vivante</h1>
+            <pre data-id="code-animation"><code class="hljs python" data-trim>
+          def fetch_user(id: int) -> User:
+              """
+              Récupère un utilisateur depuis la base de données.
+          
+              Args:
+                  id (int): Identifiant unique de l’utilisateur.
+          
+              Raises:
+                  UserNotFoundError: si l’utilisateur n’existe pas.
+          
+              Returns:
+                  User: Objet utilisateur correspondant.
+              """
+          </code></pre>
+          </section>
+
+          <!-- Dernière étape : capture pdoc -->
+          <section data-auto-animate class="shiny-slide">
+            <h1 data-id="code-title">Documentation vivante</h1>
+            <div style="text-align: center; margin-top: 20px">
               <img
-                id="practice-image"
-                src="images/logger.png"
-                alt="Aperçu"
+                src="img/pdoc.png"
+                alt="Documentation générée avec pdoc"
                 style="
-                  max-height: 250px;
-                  border-radius: 10px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                  max-width: 70%;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 "
               />
             </div>
+          </section>
 
-            <!-- Liste -->
-            <div class="slide-content">
-              <ul class="practice-list">
-                <li class="fragment" data-index="0">
-                  <i class="fa-solid fa-file-lines" style="color: #4dabf7"></i>
-                  Logger <span>(logs clairs et exploitables)</span>
-                </li>
-                <li class="fragment" data-index="1">
-                  <i class="fa-solid fa-chart-line" style="color: #51cf66"></i>
-                  Monitoring <span>(suivi du comportement en prod/test)</span>
-                </li>
-                <li class="fragment" data-index="2">
-                  <i
-                    class="fa-solid fa-triangle-exclamation"
-                    style="color: #ff922b"
-                  ></i>
-                  Exception handler
-                  <span>(erreurs gérées et compréhensibles)</span>
-                </li>
-              </ul>
+          <section data-auto-animate class="shiny-slide">
+            <h1 data-id="code-title">Performance et algorithme</h1>
+            <pre
+              data-id="code-animation"
+              style="min-width: 1050px; max-width: 1050px"
+            ><code class="hljs typescript" data-trim data-line-numbers="|10|12-20|22-29|31-35"><script type="text/template">
+              /**
+              * Merges groups of rows into super-groups by connecting groups
+              * that share at least one common column name.
+              *
+              * Algorithm used:
+              * - Union-Find (Disjoint-Set) with path compression
+              *   to efficiently merge groups connected by shared columns.
+              */
+              export function mergeGroupsBySharedColumns(
+                groupLinesArrays: Array<Array<Record<string, string>>>,
+              ): Array<Array<Record<string, string>>> {
+                const n = groupLinesArrays.length;
+                const parent = Array.from({ length: n }, (_, i) => i);
+
+                const find = (i: number): number =>
+                  parent[i] === i ? i : (parent[i] = find(parent[i]));
+
+                const union = (i: number, j: number) => {
+                  parent[find(i)] = find(j);
+                };
+
+                const colToGroups = new Map<string, number[]>();
+                for (let i = 0; i < n; i++) {
+                  const cols = Object.keys(groupLinesArrays[i][0] ?? {});
+                  for (const col of cols) {
+                    if (!colToGroups.has(col)) colToGroups.set(col, []);
+                    colToGroups.get(col)!.push(i);
+                  }
+                }
+
+                for (const groupIndexes of colToGroups.values()) {
+                  for (let i = 1; i < groupIndexes.length; i++) {
+                    union(groupIndexes[0], groupIndexes[i]);
+                  }
+                }
+
+                const superGroupsMap = new Map<number, Array<Record<string, string>>>();
+                for (let i = 0; i < n; i++) {
+                  const root = find(i);
+                  if (!superGroupsMap.has(root)) superGroupsMap.set(root, []);
+                  superGroupsMap.get(root)!.push(...groupLinesArrays[i]);
+                }
+
+                return Array.from(superGroupsMap.values());
+              }
+            </script></code></pre>
+          </section>
+
+          <!-- Étape 3 : Conclusion visuelle -->
+          <section data-auto-animate class="shiny-slide">
+            <h1 data-id="perf-title">Performance & algorithmes</h1>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5rem;
+                margin-top: 20px;
+              "
+            >
+              <div style="text-align: center">
+                <h3 style="color: #ff6b6b">Brute force</h3>
+                <p>Complexité : <b>O(N⋅C + M⋅N + N⋅L)</b></p>
+              </div>
+              <div style="text-align: center">
+                <h3 style="color: #51cf66">Union-Find</h3>
+                <p>
+                  Complexité :
+                  <b> O(N⋅C + M⋅α(N) + N⋅L) </b>
+                </p>
+              </div>
             </div>
           </section>
         </section>

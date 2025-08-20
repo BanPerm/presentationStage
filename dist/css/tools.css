@@ -1,39 +1,66 @@
 .practice-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 500px; /* largeur centrée */
-    font-size: 1em;
-    text-align: left;
-  }
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
+  max-width: 500px;
+  font-size: 0.95em; 
+  text-align: left;
+  color: white;;
+}
 
-  .practice-list li {
-    display: flex;
-    align-items: center;
-    background: #f8f9fa;
-    margin: 10px 0;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-  }
+.practice-list li {
+  display: flex;
+  align-items: flex-start; /* Alignement en haut pour éviter le dépassement */
+  margin: 12px 0;
+  padding: 8px 0; /* Pas de fond, juste un espacement vertical */
+  border-left: 3px solid #4dabf7; /* Ligne discrète à gauche */
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  line-height: 1.4; /* Meilleure lisibilité */
+}
 
-  .practice-list li i {
-    flex-shrink: 0;
-    font-size: 1.2em;
-    margin-right: 12px;
-  }
+.practice-list li.fragment {
+  opacity: 0.6;
+  transform: translateX(-10px);
+  transition: all 0.4s ease;
+}
 
-  .practice-list li span {
-    color: #6c757d;
-    font-size: 0.9em;
-  }
+.practice-list li.fragment.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
 
-  /* Survol pour effet visuel */
-  .practice-list li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
+.practice-list li i {
+  flex-shrink: 0;
+  font-size: 1.1em;
+  margin-right: 30px;
+  margin-top: 2px;
+  width: 16px;
+  text-align: center;
+}
+
+.practice-list li span {
+  color: #888; /* Gris discret pour la description */
+  font-size: 0.85em;
+  display: block; /* Chaque description à la ligne */
+  margin-top: 3px;
+}
+
+/* Effet au survol (optionnel) */
+.practice-list li:hover {
+  border-left-color: #ff922b; /* Changement de couleur discrète */
+}
+
+/* Centrage du contenu */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 
   /* Centrage horizontal de la zone globale */
   .slide-content {
