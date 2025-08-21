@@ -1,0 +1,37 @@
+.acquis-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse; /* supprime les espaces entre cellules */
+    text-align: center;
+  }
+
+  .acquis-table th, .acquis-table td {
+    padding: 10px 15px; /* réduit le padding */
+    border: 1px solid #ccc; /* ajout d'une bordure simple */
+    font-size: 0.9em; /* texte plus petit */
+  }
+
+  .acquis-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .acquis-table td {
+    background-color: #f9f9f9;
+  }
+
+  /* Alternance légère pour les lignes */
+  .acquis-table tbody tr:nth-child(odd) td {
+    background-color: #e8f5e9;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .acquis-table {
+      width: 100%;
+      font-size: 0.8em;
+    }
+    .acquis-table th, .acquis-table td {
+      padding: 8px;
+    }
+  }
