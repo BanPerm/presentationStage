@@ -117,7 +117,6 @@
 
 /* Responsive */
 @media (max-width: 960px) {
-  .cropttraits-container h1 { font-size: 2.4rem; }
   .cropttraits-container .description { font-size: 1rem; }
   .cropttraits-stats { width: 95%; gap: 1rem; }
   .cropttraits-container .visualization { width: 95%; }
