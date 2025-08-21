@@ -57,5 +57,15 @@ document.addEventListener("keydown", function (event) {
     case "Numpad6":
       forwardVideo(currentVideo, 10);
       break;
+
+    case "1": // avance/recul sur touches normales
+    case "Numpad4": // pavé numérique
+      rewindVideo(currentVideo, 1);
+      break;
+
+    case "3":
+    case "Numpad6":
+      forwardVideo(currentVideo, 1);
+      break;
   }
 });
