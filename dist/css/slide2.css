@@ -113,6 +113,21 @@ ul.sommaire-list li:hover {
   max-height: none;
 }
 
+#leaves-end {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh + 100px);
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
+}
+
 .leaf {
   position: absolute;
   width: 30px;
