@@ -8,10 +8,10 @@ const images = [
 Reveal.on("fragmentshown", (event) => {
   const idx = event.fragment.dataset.index;
   event.fragment.classList.add("visible");
-  if (idx !== undefined) {
+  if (idx !== undefined && idx >= 0 && idx < images.length) {
     document.getElementById("practice-image").src = images[idx];
   } else {
-    document.getElementById("practice-image").src = "img/main.png"; // image par défaut
+    document.getElementById("practice-image").src = "img/main.png";
   }
 });
 

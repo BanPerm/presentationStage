@@ -204,7 +204,6 @@
 
           <section class="shiny-slide" style="padding:0">
             <!-- SVG responsive -->
-            <section class="shiny-slide" style="padding:0">
               <svg viewBox="0 0 1200 700" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
                   aria-labelledby="title desc" role="img">
                 <title id="title">Rôle et interactions</title>
@@ -328,85 +327,8 @@
                   Moi
                 </text>
               </svg>
-            </section>
 
           </section>
-<!-- 
-          <section class="shiny-slide">
-            <h1>Projet multidiciplinaire</h1>
-            <div class="ecopar-inner team-grid">
-              <div class="profile">
-                <img
-                  src="img/profil1.jpg"
-                  alt="Nom 1"
-                  class="profile-photo"
-                  onerror="this.onerror=null; this.src='img/random.png';"
-                />
-                <div class="profile-info">
-                  <h3>Lucie Mahaut</h3>
-                  <p><strong>Rôle :</strong> Ecologue</p>
-                  <p>
-                    Responsable du projet Croptrais, elle m’a accompagné et
-                    encadré tout au long du stage.
-                  </p>
-                </div>
-              </div>
-
-              <div class="profile">
-                <img
-                  src="img/profil1.jpg"
-                  alt="Nom 1"
-                  class="profile-photo"
-                  onerror="this.onerror=null; this.src='img/random.png';"
-                />
-                <div class="profile-info">
-                  <h3>Christelle Dantec</h3>
-                  <p><strong>Rôle :</strong> Spécialiste donnée</p>
-                  <p>
-                    Elle m’a suivi tout au long du projet, fait des retours sur
-                    les fonctionnalités et m’a donné des conseils pour avancer,
-                    même si le web n’est pas sa spécialité.
-                  </p>
-                </div>
-              </div>
-
-              <div class="profile">
-                <img
-                  src="img/profil1.jpg"
-                  alt="Nom 1"
-                  class="profile-photo"
-                  onerror="this.onerror=null; this.src='img/random.png';"
-                />
-                <div class="profile-info">
-                  <h3>Charly Maeder</h3>
-                  <p><strong>Rôle :</strong> Developpeur</p>
-                  <p>
-                    Il m’a accompagné dans les bonnes pratiques de développement
-                    et dans les revues de code, en apportant son expertise
-                    technique.
-                  </p>
-                </div>
-              </div>
-
-              <div class="profile">
-                <img
-                  src="img/profil1.jpg"
-                  alt="Nom 1"
-                  class="profile-photo"
-                  onerror="this.onerror=null; this.src='img/random.png';"
-                />
-                <div class="profile-info">
-                  <h3>Alexandre Granier</h3>
-                  <p><strong>Rôle :</strong> Developeur</p>
-                  <p>
-                    Référent technique du projet, m’a guidé sur l’implémentation
-                    et les contraintes à respecter, tout en apportant des
-                    retours constructifs pour améliorer l’application.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section> -->
 
           <section class="comm-slide" data-background-transition="fade">
             <div class="comm-slide"></div>
@@ -705,6 +627,8 @@
               </figure>
             </div>
           </section>
+
+          
           <section class="org-slide">
             <div class="org-slide">
               <div class="org-bg"></div>
@@ -880,6 +804,7 @@
               </div>
             </div>
           </section>
+
         </section>
 
         <!--%%%%%%%%%%%%%% L'existant %%%%%%%%%%%%%%-->
@@ -1226,7 +1151,8 @@
 
         <section>
           <section class="shiny-slide">
-            <h1>Organisation du code</h1>
+            <h1 style="font-size: 3em;">Organisation du code</h1>
+            <!--
             <p style="margin-top: 1em; text-align: center; min-width: 88vw">
               Vue d'ensemble de la structure du projet
             </p>
@@ -1240,7 +1166,7 @@
                 max-width: 100vw;
               "
             >
-              <!-- Frontend -->
+              Frontend
               <div>
                 <h3>Frontend</h3>
                 <pre
@@ -1255,7 +1181,7 @@
                     <span class="fragment" data-fragment-index="1" style="color:#1f77b4;">project-frontend/</span>
                     <span class="fragment" data-fragment-index="1" style="margin-left:20px; color:#ff7f0e;">features/</span>
 
-                    <!-- enfants de features -->
+                    enfants de features
                     <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">components/</span>
                     <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">api.ts</span>
                     <span class="fragment" data-fragment-index="2" style="margin-left:40px; color:#2ca02c;">types.ts</span>
@@ -1272,7 +1198,7 @@
                   </pre>
               </div>
 
-              <!-- Backend -->
+              Backend
               <div>
                 <h3>Backend</h3>
                 <pre
@@ -1309,6 +1235,7 @@
               </pre>
               </div>
             </div>
+            -->
           </section>
           <section class="shiny-slide">
             <h1>Bonnes pratiques & socle solide</h1>
@@ -1516,91 +1443,6 @@
                   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 "
               />
-            </div>
-          </section>
-
-          <!-- Slide 5 — Qualité & Sécurité : CI/CD -->
-          <section data-auto-animate class="shiny-slide">
-            <h1 style="margin-bottom: 0.5em">Cycle de développement</h1>
-
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-                align-items: flex-start;
-              "
-            >
-              <!-- CI/CD -->
-              <div class="fragment" style="width: 100%">
-                <h3
-                  style="font-size: 1.3em; color: #1f77b4; margin-bottom: 0.5em"
-                >
-                  CI/CD
-                </h3>
-                <pre
-                  data-id="cicd-code"
-                  style="
-                    font-size: 0.6em;
-                    max-height: 35vh;
-                    width: 70vw;
-                    overflow: auto;
-                  "
-                >
-                <code class="hljs yaml" data-trim><script type="text/template">
-                stages:
-                  - build
-
-                build:
-                  stage: build
-                  only:
-                    - development
-                  tags:
-                    - linux
-                  environment:
-                    dev
-                  script:
-                    - ./generate_env.sh
-                    - |
-                      (
-                        export POSTGRES_USER="$DB_USER";\
-                        export POSTGRES_PASSWORD="$DB_PASSWORD";\
-                        export POSTGRES_DB="$DB";\
-                        sudo docker-compose up -d --build
-                      )
-                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/01_CropTraits.sql
-                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/02_change.sql
-                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/03_rename.sql
-                    - PGPASSWORD="$DB_PASSWORD" psql -h localhost -p "$DB_PORT" -U "$DB_USER" "$DB" < "$SQL_FILES_PATH"/04_create_user.sql
-                        </script></code>
-                      </pre>
-              </div>
-
-              <!-- Dockerisation -->
-              <div class="fragment" style="width: 100%">
-                <h3
-                  style="font-size: 1.3em; color: #ff7f0e; margin-bottom: 0.5em"
-                >
-                  Dockerisation
-                </h3>
-                <pre
-                  style="
-                    font-size: 0.6em;
-                    max-height: 30vh;
-                    width: 70vw;
-                    overflow: auto;
-                  "
-                >
-                    <code class="hljs dockerfile"><script type="text/template">
-FROM python:3.11-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["python", "main.py"]
-                  </script></code>
-               </pre>
-              </div>
             </div>
           </section>
         </section>
