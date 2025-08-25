@@ -96,7 +96,7 @@
               <img src="https://www.cefe.cnrs.fr/d_map/photos/cefe/f400_cefe.jpg" alt="Logo du CEFE" style="max-width: 700px; width: 700px;">
               <p style="margin-top: 1em; font-size: 1.5em; text-align: center; margin: auto;">
                 Le CEFE est un centre de recherche en écologie fonctionnelle et évolutive, 
-                basé à Montpellier et rattaché au CNRS.
+                basé à Montpellier, avec cinq tutelles dont la principale est le CNRS.
               </p>
             </div>
           </section>
@@ -116,12 +116,12 @@
             <div class="ecopar-inner">
               <div class="ecopar-left">
                 <h1>ECOPAR</h1>
-                <p class="ecopar-sub">
+                <p class="ecopar-sub" style="font-size: 23px;">
                   Écologie comparative des communautés végétales et de leur
                   fonctionnement
                 </p>
 
-                <div class="ecopar-meta">
+                <div class="ecopar-meta" style="font-size: large;">
                   <span class="chip">UMR 5175</span>
                   <span class="chip">CNRS • Univ. Montpellier</span>
                   <span class="chip">Terrains & laboratoires</span>
@@ -133,7 +133,7 @@
                   <article class="focus-item fragment">
                     <div class="focus-media"><div class="icon">🌱</div></div>
                     <div class="focus-body">
-                      <h4>Traits fonctionnels</h4>
+                      <h4 >Traits fonctionnels</h4>
                       <p>
                         Mesure et analyse des traits des plantes pour comprendre
                         performance et compétition.
@@ -171,8 +171,8 @@
 
             <!-- Div globale pour centrer tout le contenu -->
             <div class="cropttraits-container">
-              <h1>CropTraits</h1>
-              <p class="description">
+              <h1 style="font-size: 5rem;">CropTraits</h1>
+              <p class="description" style="font-size: 1.5rem;">
                 Base de données sur les traits écophysiologiques des plantes
                 cultivées.
               </p>
@@ -196,7 +196,7 @@
                 <div class="stat-item">
                   <div class="icon">🧬</div>
                   <div class="number">288</div>
-                  <div class="label">Taxons</div>
+                  <div class="label">Espèces</div>
                 </div>
               </div>
             </div>
@@ -512,7 +512,7 @@
                       x="210"
                       y="115"
                       text-anchor="middle"
-                      font-size="10"
+                      font-size="13"
                       fill="#1f6f4f"
                     >
                       y = mx + b
@@ -560,9 +560,9 @@
                     />
                     <!-- Représentation de code -->
                     <rect
-                      x="540"
+                      x="520"
                       y="95"
-                      width="110"
+                      width="150"
                       height="50"
                       rx="5"
                       fill="#e0f2f1"
@@ -573,25 +573,25 @@
                       x="590"
                       y="110"
                       text-anchor="middle"
-                      font-size="10"
+                      font-size="13"
                       fill="#1f6f4f"
                     >
                       CREATE TABLE test (
                     </text>
                     <text
                       x="590"
-                      y="120"
+                      y="123"
                       text-anchor="middle"
-                      font-size="10"
+                      font-size="13"
                       fill="#1f6f4f"
                     >
                       id: integer;
                     </text>
                     <text
                       x="590"
-                      y="130"
+                      y="136"
                       text-anchor="middle"
-                      font-size="10"
+                      font-size="13"
                       fill="#1f6f4f"
                     >
                       name: text;
@@ -1353,82 +1353,15 @@
 
           <section data-auto-animate class="shiny-slide">
             <h1 data-id="code-title">Performance et algorithme</h1>
-            <pre
-              data-id="code-animation"
-              style="min-width: 1050px; max-width: 1050px"
-            ><code class="hljs typescript" data-trim data-line-numbers="|10|12-20|22-29|31-35"><script type="text/template">
-              /**
-              * Merges groups of rows into super-groups by connecting groups
-              * that share at least one common column name.
-              *
-              * Algorithm used:
-              * - Union-Find (Disjoint-Set) with path compression
-              *   to efficiently merge groups connected by shared columns.
-              */
-              export function mergeGroupsBySharedColumns(
-                groupLinesArrays: Array<Array<Record<string, string>>>,
-              ): Array<Array<Record<string, string>>> {
-                const n = groupLinesArrays.length;
-                const parent = Array.from({ length: n }, (_, i) => i);
-
-                const find = (i: number): number =>
-                  parent[i] === i ? i : (parent[i] = find(parent[i]));
-
-                const union = (i: number, j: number) => {
-                  parent[find(i)] = find(j);
-                };
-
-                const colToGroups = new Map<string, number[]>();
-                for (let i = 0; i < n; i++) {
-                  const cols = Object.keys(groupLinesArrays[i][0] ?? {});
-                  for (const col of cols) {
-                    if (!colToGroups.has(col)) colToGroups.set(col, []);
-                    colToGroups.get(col)!.push(i);
-                  }
-                }
-
-                for (const groupIndexes of colToGroups.values()) {
-                  for (let i = 1; i < groupIndexes.length; i++) {
-                    union(groupIndexes[0], groupIndexes[i]);
-                  }
-                }
-
-                const superGroupsMap = new Map<number, Array<Record<string, string>>>();
-                for (let i = 0; i < n; i++) {
-                  const root = find(i);
-                  if (!superGroupsMap.has(root)) superGroupsMap.set(root, []);
-                  superGroupsMap.get(root)!.push(...groupLinesArrays[i]);
-                }
-
-                return Array.from(superGroupsMap.values());
-              }
-            </script></code></pre>
-          </section>
-
-          <!-- Étape 3 : Conclusion visuelle -->
-          <section data-auto-animate class="shiny-slide">
-            <h1 data-id="perf-title">Performance & algorithmes</h1>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5rem;
-                margin-top: 20px;
-              "
-            >
-              <div style="text-align: center">
-                <h3 style="color: #ff6b6b">Brute force</h3>
-                <p>Complexité : <b>O(N⋅C + M⋅N + N⋅L)</b></p>
-              </div>
-              <div style="text-align: center">
-                <h3 style="color: #51cf66">Union-Find</h3>
-                <p>
-                  Complexité :
-                  <b> O(N⋅C + M⋅α(N) + N⋅L) </b>
-                </p>
-              </div>
-            </div>
+            <img
+                src="img/Union_find_example.png"
+                alt="Cycle CI/CD"
+                style="
+                  max-width: 75%;
+                  border-radius: 12px;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                "
+              />
           </section>
 
           <section class="shiny-slide">
@@ -1495,6 +1428,12 @@
         </section>
 
         <section class="shiny-slide">
+          <h1 style="font-size: 4em">Reprise du projet</h1>
+        </section>
+
+
+
+        <section class="shiny-slide">
           <h1 style="font-size: 2em">Mes Acquis du Stage</h1>
           <table class="acquis-table">
             <thead>
@@ -1523,6 +1462,7 @@
             </tbody>
           </table>
         </section>
+        
         <section class="shiny-slide">
           <h1 style="font-size: 3em">Conclusion</h1>
         </section>
