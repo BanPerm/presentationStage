@@ -206,127 +206,120 @@
             <!-- SVG responsive -->
               <svg viewBox="0 0 1200 700" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
                   aria-labelledby="title desc" role="img">
-                <title id="title">Rôle et interactions</title>
-                <desc id="desc">Petit personnage “Moi” au centre, relié au Pôle Informatique et à l’équipe ECOPAR.</desc>
+              <title id="title">Rôle et interactions</title>
+              <desc id="desc">Moi au centre, relié au Pôle Numérique et à l’équipe ECOPAR.</desc>
 
-                <!-- ======= Défs / Styles ======= -->
-                <defs>
-                  <!-- Halo doux -->
-                  <radialGradient id="halo" cx="50%" cy="50%" r="60%">
-                    <stop offset="0%" stop-color="rgba(80,160,255,0.35)"/>
-                    <stop offset="100%" stop-color="rgba(80,160,255,0)"/>
-                  </radialGradient>
+              <defs>
+                <!-- Halo doux -->
+                <radialGradient id="halo" cx="50%" cy="50%" r="60%">
+                  <stop offset="0%" stop-color="rgba(80,160,255,0.35)"/>
+                  <stop offset="100%" stop-color="rgba(80,160,255,0)"/>
+                </radialGradient>
 
-                  <!-- Dégradés bulles -->
-                  <linearGradient id="bubbleGradLeft" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#1f77b4"/>
-                    <stop offset="100%" stop-color="#4dabf7"/>
-                  </linearGradient>
-                  <linearGradient id="bubbleGradRight" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#2ca02c"/>
-                    <stop offset="100%" stop-color="#51cf66"/>
-                  </linearGradient>
+                <!-- Ombre douce -->
+                <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.25"/>
+                </filter>
+              </defs>
 
-                  <!-- Ombre douce -->
-                  <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.25"/>
-                  </filter>
-                </defs>
-
-                <!-- ======= Titre ======= -->
-                <g aria-hidden="true">
-                  <text x="600" y="90" text-anchor="middle"
-                        style="font:700 44px/1.1 Inter,system-ui,sans-serif; fill:#e8f4ff">
-                    Projet multidiciplinaire
-                  </text>
-                  <text x="600" y="130" text-anchor="middle"
-                        style="font:400 18px/1.3 Inter,system-ui,sans-serif; fill:rgba(255,255,255,0.75)">
-                    Pont entre le Pôle Informatique et l’équipe ECOPAR
-                  </text>
-                </g>
-
-                <!-- ======= Halo centre ======= -->
-                <circle cx="600" cy="380" r="170" fill="url(#halo)"/>
-
-                <!-- ======= Connecteurs ======= -->
-                <path d="M 520 320 C 440 260, 380 230, 330 210" fill="none"
-                      stroke="rgba(255,255,255,0.75)" stroke-width="3"/>
-                <path d="M 680 320 C 760 260, 820 230, 870 210" fill="none"
-                      stroke="rgba(255,255,255,0.75)" stroke-width="3"/>
-
-                <!-- ======= Bulles ======= -->
-                <g filter="url(#softShadow)">
-                  <rect x="210" y="160" rx="18" ry="18" width="260" height="110" fill="url(#bubbleGradLeft)"/>
-                  <text x="340" y="220" text-anchor="middle"
-                        style="font:700 22px/1.1 Inter,system-ui,sans-serif; fill:#fff">
-                    Pôle Informatique
-                  </text>
-                </g>
-                <g filter="url(#softShadow)">
-                  <rect x="730" y="160" rx="18" ry="18" width="260" height="110" fill="url(#bubbleGradRight)"/>
-                  <text x="860" y="220" text-anchor="middle"
-                        style="font:700 22px/1.1 Inter,system-ui,sans-serif; fill:#fff">
-                    Équipe ECOPAR
-                  </text>
-                </g>
-
-                <!-- ======= Petit bonhomme (centre) ======= -->
-                <g filter="url(#softShadow)">
-                  <!-- socle circulaire léger -->
-                  <circle cx="600" cy="380" r="128" fill="rgba(255,255,255,0.08)"
-                          stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
-                  <!-- personnage (taille ~160x220 autour du centre) -->
-                  <!-- tête -->
-                  <circle cx="600" cy="320" r="36" fill="#ffd5b5" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-
-                  <!-- Éclair Harry Potter -->
-                   <!-- <polyline points="587,290   582,300   590,300   585,310" -->
-                  <polyline points="588,290   590,300   583,300   585,310" 
-                            fill="none" 
-                            stroke="#000000" 
-                            stroke-width="3" 
-                            stroke-linejoin="round" 
-                            stroke-linecap="round"/>
-
-                    <!-- Lunettes -->
-                    <g>
-                      <!-- monture gauche -->
-                      <circle cx="585" cy="320" r="12" fill="none" stroke="#222" stroke-width="3"/>
-                      <!-- monture droite -->
-                      <circle cx="615" cy="320" r="12" fill="none" stroke="#222" stroke-width="3"/>
-                      <!-- pont -->
-                      <line x1="597" y1="320" x2="603" y2="320" stroke="#222" stroke-width="3"/>
-                      <!-- branches simples -->
-                      <line x1="573" y1="320" x2="565" y2="318" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-                      <line x1="627" y1="320" x2="635" y2="318" stroke="#222" stroke-width="3" stroke-linecap="round"/>
-                    </g>
-                  <!-- col -->
-                  <rect x="586" y="354" width="28" height="10" rx="5" fill="#e6eefb" opacity="0.9"/>
-                  <!-- torse (chemise) -->
-                  <path d="M540,365
-                          Q600,350 660,365
-                          L660,445
-                          Q600,465 540,445 Z"
-                        fill="#4dabf7" />
-                  <!-- col V -->
-                  <path d="M585,368 L600,388 L615,368" fill="#e6eefb" opacity="0.95"/>
-                  <!-- bras -->
-                  <path d="M540,370 Q520,395 535,420" fill="none" stroke="#4dabf7" stroke-width="12" stroke-linecap="round"/>
-                  <path d="M660,370 Q680,395 665,420" fill="none" stroke="#4dabf7" stroke-width="12" stroke-linecap="round"/>
-                  <!-- jambes (pantalon simple) -->
-                  <path d="M560,445 L560,490" stroke="#2f3e46" stroke-width="12" stroke-linecap="round"/>
-                  <path d="M640,445 L640,490" stroke="#2f3e46" stroke-width="12" stroke-linecap="round"/>
-                  <!-- chaussures -->
-                  <path d="M550,490 L572,490" stroke="#1f2428" stroke-width="10" stroke-linecap="round"/>
-                  <path d="M628,490 L650,490" stroke="#1f2428" stroke-width="10" stroke-linecap="round"/>
-                </g>
-
-                <!-- ======= Label ======= -->
-                <text x="600" y="560" text-anchor="middle"
-                      style="font:600 20px/1.2 Inter,system-ui,sans-serif; fill:rgba(255,255,255,0.95)">
-                  Moi
+              <!-- ======= Titre général ======= -->
+              <g aria-hidden="true">
+                <text x="600" y="90" text-anchor="middle"
+                      style="font:700 44px/1.1 Inter,system-ui,sans-serif; fill:#e8f4ff">
+                  Projet multidisciplinaire
                 </text>
-              </svg>
+                <text x="600" y="130" text-anchor="middle"
+                      style="font:400 18px/1.3 Inter,system-ui,sans-serif; fill:rgba(255,255,255,0.75);">
+                  Pont entre le Pôle Numérique et l’équipe ECOPAR
+                </text>
+              </g>
+
+              <!-- ======= Halo centre ======= -->
+              <circle cx="600" cy="380" r="170" fill="url(#halo)"/>
+
+              <!-- ======= Connecteurs ======= -->
+              <path d="M 520 320 C 440 260, 380 230, 330 210" fill="none"
+                    stroke="rgba(255,255,255,0.75)" stroke-width="3"/>
+              <path d="M 680 320 C 760 260, 820 230, 870 210" fill="none"
+                    stroke="rgba(255,255,255,0.75)" stroke-width="3"/>
+
+              <!-- ======= Cadre Pôle Numérique ======= -->
+              <g filter="url(#softShadow)">
+                <rect x="180" y="145" rx="18" ry="18" width="300" height="160" fill="#1f77b4" stroke="#4dabf7" stroke-width="3"/>
+                <text x="330" y="175" text-anchor="middle"
+                      style="font:700 22px/1.2 Inter,system-ui,sans-serif; fill:#fff">
+                  Pôle Numérique
+                </text>
+                <text x="330" y="210" text-anchor="middle"
+                      style="font:400 18px Inter,system-ui,sans-serif; fill:#fff">
+                  Développeurs
+                </text>
+                <text x="330" y="240" text-anchor="middle"
+                      style="font:400 18px Inter,system-ui,sans-serif; fill:#fff">
+                  Administrateurs système
+                </text>
+                <text x="330" y="270" text-anchor="middle"
+                      style="font:400 18px Inter,system-ui,sans-serif; fill:#fff">
+                  Base de données
+                </text>
+              </g>
+
+              <!-- ======= Cadre ECOPAR ======= -->
+              <g filter="url(#softShadow)">
+                <rect x="720" y="145" rx="18" ry="18" width="300" height="110" fill="#2ca02c" stroke="#51cf66" stroke-width="3"/>
+                <text x="870" y="175" text-anchor="middle"
+                      style="font:700 22px/1.2 Inter,system-ui,sans-serif; fill:#fff">
+                  Équipe ECOPAR
+                </text>
+                <text x="870" y="210" text-anchor="middle"
+                      style="font:400 18px Inter,system-ui,sans-serif; fill:#fff">
+                  Écologues
+                </text>
+              </g>
+
+              <!-- ======= Petit bonhomme (centre) ======= --> 
+              <g filter="url(#softShadow)"> 
+                <!-- socle circulaire léger --> 
+                <circle cx="600" cy="380" r="128" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/> 
+                <!-- personnage (taille ~160x220 autour du centre) --> <!-- tête --> 
+                <circle cx="600" cy="320" r="36" fill="#ffd5b5" stroke="rgba(0,0,0,0.08)" stroke-width="1"/> 
+                <!-- Éclair Harry Potter --> <!-- <polyline points="587,290 582,300 590,300 585,310" --> 
+                <polyline points="588,290 590,300 583,300 585,310" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/> 
+                <!-- Lunettes --> 
+                <g> 
+                  <!-- monture gauche --> 
+                  <circle cx="585" cy="320" r="12" fill="none" stroke="#222" stroke-width="3"/> 
+                  <!-- monture droite --> 
+                  <circle cx="615" cy="320" r="12" fill="none" stroke="#222" stroke-width="3"/> 
+                  <!-- pont --> 
+                  <line x1="597" y1="320" x2="603" y2="320" stroke="#222" stroke-width="3"/> 
+                  <!-- branches simples --> 
+                  <line x1="573" y1="320" x2="565" y2="318" stroke="#222" stroke-width="3" stroke-linecap="round"/> 
+                  <line x1="627" y1="320" x2="635" y2="318" stroke="#222" stroke-width="3" stroke-linecap="round"/> 
+                </g> 
+                <!-- col --> 
+                <rect x="586" y="354" width="28" height="10" rx="5" fill="#e6eefb" opacity="0.9"/> 
+                <!-- torse (chemise) --> 
+                <path d="M540,365 Q600,350 660,365 L660,445 Q600,465 540,445 Z" fill="#4dabf7" /> 
+                <!-- col V --> 
+                <path d="M585,368 L600,388 L615,368" fill="#e6eefb" opacity="0.95"/> 
+                <!-- bras --> 
+                <path d="M540,370 Q520,395 535,420" fill="none" stroke="#4dabf7" stroke-width="12" stroke-linecap="round"/> 
+                <path d="M660,370 Q680,395 665,420" fill="none" stroke="#4dabf7" stroke-width="12" stroke-linecap="round"/> 
+                <!-- jambes (pantalon simple) --> 
+                <path d="M560,445 L560,490" stroke="#2f3e46" stroke-width="12" stroke-linecap="round"/> 
+                <path d="M640,445 L640,490" stroke="#2f3e46" stroke-width="12" stroke-linecap="round"/> 
+                <!-- chaussures --> 
+                <path d="M550,490 L572,490" stroke="#1f2428" stroke-width="10" stroke-linecap="round"/> 
+                <path d="M628,490 L650,490" stroke="#1f2428" stroke-width="10" stroke-linecap="round"/> 
+              </g>
+
+              <!-- ======= Label ======= -->
+              <text x="600" y="560" text-anchor="middle"
+                    style="font:600 20px/1.2 Inter,system-ui,sans-serif; fill:rgba(255,255,255,0.95)">
+                Moi
+              </text>
+            </svg>
 
           </section>
 
