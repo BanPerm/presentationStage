@@ -90,77 +90,17 @@
             <h1 style="font-size: 3em">Présentation</h1>
           </section>
 
-          <section class="evolution-cefe">
-            <div class="evo-inner">
-              <h1>De 1961 à <span>aujourd'hui</span></h1>
-
-              <div class="timeline-container">
-                <article class="timeline-block left fragment">
-                  <div class="marker" aria-hidden="true">📚</div>
-                  <div class="timeline-content">
-                    <h3>1961 — Fondation (CEPE)</h3>
-                    <p>
-                      Le Centre d’Études Phytosociologiques et Écologiques
-                      (CEPE), ancêtre du CEFE, a été fondé en 1961 par Louis
-                      Emberger, avec pour objectif initial l’étude des
-                      associations végétales et la cartographie de la
-                      végétation.
-                    </p>
-                  </div>
-                </article>
-
-                <article class="timeline-block right fragment">
-                  <div class="marker" aria-hidden="true">🏗️</div>
-                  <div class="timeline-content">
-                    <h3>1962–1967 — Construction des bâtiments</h3>
-                    <p>
-                      Les premiers bâtiments du centre ont été érigés durant les
-                      années 1960, imposant un lieu d’expérimentation et
-                      d’observations de terrain pour la recherche écologique.
-                    </p>
-                  </div>
-                </article>
-
-                <article class="timeline-block left fragment">
-                  <div class="marker" aria-hidden="true">🔁</div>
-                  <div class="timeline-content">
-                    <h3>1988 — De CEPE à CEFE</h3>
-                    <p>
-                      Le CEPE devient le Centre d’Écologie Fonctionnelle et
-                      Évolutive (CEFE), marquant un recentrage scientifique vers
-                      l’écologie fonctionnelle et évolutive.
-                    </p>
-                  </div>
-                </article>
-
-                <article class="timeline-block right fragment">
-                  <div class="marker" aria-hidden="true">🏛️</div>
-                  <div class="timeline-content">
-                    <h3>UMR 5175 & tutelles</h3>
-                    <p>
-                      Le CEFE est devenu une UMR (UMR 5175) en 2003, avec
-                      aujourd’hui quatre tutelles principales (CNRS, EPHE, IRD,
-                      Université de Montpellier) et trois partenaires
-                      secondaires (Institut Agro, INRAE, UPV).
-                    </p>
-                  </div>
-                </article>
-
-                <article class="timeline-block left fragment">
-                  <div class="marker" aria-hidden="true">🔬</div>
-                  <div class="timeline-content">
-                    <h3>Sujets majeurs</h3>
-                    <p>
-                      Les recherches du CEFE couvrent des thèmes majeurs tels
-                      que la dynamique de la biodiversité, les changements
-                      environnementaux, l’écologie évolutive et comportementale,
-                      avec des approches multi-échelles et interdisciplinaires.
-                    </p>
-                  </div>
-                </article>
-              </div>
+          <section class="shiny-slide">
+            <h1 style="font-size: 3em">CEFE</h1>
+            <div style="text-align: center; margin-top: 2em; font-size: medium;">
+              <img src="https://www.cefe.cnrs.fr/d_map/photos/cefe/f400_cefe.jpg" alt="Logo du CEFE" style="max-width: 700px; width: 700px;">
+              <p style="margin-top: 1em; font-size: 1.5em; text-align: center; margin: auto;">
+                Le CEFE est un centre de recherche en écologie fonctionnelle et évolutive, 
+                basé à Montpellier et rattaché au CNRS.
+              </p>
             </div>
           </section>
+
 
           <section class="ecopar-slide" data-bg="./img/ecopar-team.jpg">
             <!-- background layer (we'll set image from data-bg or inline style) -->
@@ -262,10 +202,139 @@
             </div>
           </section>
 
+          <section class="shiny-slide" style="padding:0">
+            <!-- SVG responsive -->
+            <section class="shiny-slide" style="padding:0">
+              <svg viewBox="0 0 1200 700" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
+                  aria-labelledby="title desc" role="img">
+                <title id="title">Rôle et interactions</title>
+                <desc id="desc">Petit personnage “Moi” au centre, relié au Pôle Informatique et à l’équipe ECOPAR.</desc>
+
+                <!-- ======= Défs / Styles ======= -->
+                <defs>
+                  <!-- Halo doux -->
+                  <radialGradient id="halo" cx="50%" cy="50%" r="60%">
+                    <stop offset="0%" stop-color="rgba(80,160,255,0.35)"/>
+                    <stop offset="100%" stop-color="rgba(80,160,255,0)"/>
+                  </radialGradient>
+
+                  <!-- Dégradés bulles -->
+                  <linearGradient id="bubbleGradLeft" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#1f77b4"/>
+                    <stop offset="100%" stop-color="#4dabf7"/>
+                  </linearGradient>
+                  <linearGradient id="bubbleGradRight" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#2ca02c"/>
+                    <stop offset="100%" stop-color="#51cf66"/>
+                  </linearGradient>
+
+                  <!-- Ombre douce -->
+                  <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="10" flood-opacity="0.25"/>
+                  </filter>
+                </defs>
+
+                <!-- ======= Titre ======= -->
+                <g aria-hidden="true">
+                  <text x="600" y="90" text-anchor="middle"
+                        style="font:700 44px/1.1 Inter,system-ui,sans-serif; fill:#e8f4ff">
+                    Projet multidiciplinaire
+                  </text>
+                  <text x="600" y="130" text-anchor="middle"
+                        style="font:400 18px/1.3 Inter,system-ui,sans-serif; fill:rgba(255,255,255,0.75)">
+                    Pont entre le Pôle Informatique et l’équipe ECOPAR
+                  </text>
+                </g>
+
+                <!-- ======= Halo centre ======= -->
+                <circle cx="600" cy="380" r="170" fill="url(#halo)"/>
+
+                <!-- ======= Connecteurs ======= -->
+                <path d="M 520 320 C 440 260, 380 230, 330 210" fill="none"
+                      stroke="rgba(255,255,255,0.75)" stroke-width="3"/>
+                <path d="M 680 320 C 760 260, 820 230, 870 210" fill="none"
+                      stroke="rgba(255,255,255,0.75)" stroke-width="3"/>
+
+                <!-- ======= Bulles ======= -->
+                <g filter="url(#softShadow)">
+                  <rect x="210" y="160" rx="18" ry="18" width="260" height="110" fill="url(#bubbleGradLeft)"/>
+                  <text x="340" y="220" text-anchor="middle"
+                        style="font:700 22px/1.1 Inter,system-ui,sans-serif; fill:#fff">
+                    Pôle Informatique
+                  </text>
+                </g>
+                <g filter="url(#softShadow)">
+                  <rect x="730" y="160" rx="18" ry="18" width="260" height="110" fill="url(#bubbleGradRight)"/>
+                  <text x="860" y="220" text-anchor="middle"
+                        style="font:700 22px/1.1 Inter,system-ui,sans-serif; fill:#fff">
+                    Équipe ECOPAR
+                  </text>
+                </g>
+
+                <!-- ======= Petit bonhomme (centre) ======= -->
+                <g filter="url(#softShadow)">
+                  <!-- socle circulaire léger -->
+                  <circle cx="600" cy="380" r="128" fill="rgba(255,255,255,0.08)"
+                          stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+                  <!-- personnage (taille ~160x220 autour du centre) -->
+                  <!-- tête -->
+                  <circle cx="600" cy="320" r="36" fill="#ffd5b5" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+
+                  <!-- Éclair Harry Potter -->
+                   <!-- <polyline points="587,290   582,300   590,300   585,310" -->
+                  <polyline points="588,290   590,300   583,300   585,310" 
+                            fill="none" 
+                            stroke="#000000" 
+                            stroke-width="3" 
+                            stroke-linejoin="round" 
+                            stroke-linecap="round"/>
+
+                    <!-- Lunettes -->
+                    <g>
+                      <!-- monture gauche -->
+                      <circle cx="585" cy="320" r="12" fill="none" stroke="#222" stroke-width="3"/>
+                      <!-- monture droite -->
+                      <circle cx="615" cy="320" r="12" fill="none" stroke="#222" stroke-width="3"/>
+                      <!-- pont -->
+                      <line x1="597" y1="320" x2="603" y2="320" stroke="#222" stroke-width="3"/>
+                      <!-- branches simples -->
+                      <line x1="573" y1="320" x2="565" y2="318" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+                      <line x1="627" y1="320" x2="635" y2="318" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+                    </g>
+                  <!-- col -->
+                  <rect x="586" y="354" width="28" height="10" rx="5" fill="#e6eefb" opacity="0.9"/>
+                  <!-- torse (chemise) -->
+                  <path d="M540,365
+                          Q600,350 660,365
+                          L660,445
+                          Q600,465 540,445 Z"
+                        fill="#4dabf7" />
+                  <!-- col V -->
+                  <path d="M585,368 L600,388 L615,368" fill="#e6eefb" opacity="0.95"/>
+                  <!-- bras -->
+                  <path d="M540,370 Q520,395 535,420" fill="none" stroke="#4dabf7" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M660,370 Q680,395 665,420" fill="none" stroke="#4dabf7" stroke-width="12" stroke-linecap="round"/>
+                  <!-- jambes (pantalon simple) -->
+                  <path d="M560,445 L560,490" stroke="#2f3e46" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M640,445 L640,490" stroke="#2f3e46" stroke-width="12" stroke-linecap="round"/>
+                  <!-- chaussures -->
+                  <path d="M550,490 L572,490" stroke="#1f2428" stroke-width="10" stroke-linecap="round"/>
+                  <path d="M628,490 L650,490" stroke="#1f2428" stroke-width="10" stroke-linecap="round"/>
+                </g>
+
+                <!-- ======= Label ======= -->
+                <text x="600" y="560" text-anchor="middle"
+                      style="font:600 20px/1.2 Inter,system-ui,sans-serif; fill:rgba(255,255,255,0.95)">
+                  Moi
+                </text>
+              </svg>
+            </section>
+
+          </section>
+<!-- 
           <section class="shiny-slide">
             <h1>Projet multidiciplinaire</h1>
             <div class="ecopar-inner team-grid">
-              <!-- Profil 1 -->
               <div class="profile">
                 <img
                   src="img/profil1.jpg"
@@ -283,7 +352,6 @@
                 </div>
               </div>
 
-              <!-- Profil 2 -->
               <div class="profile">
                 <img
                   src="img/profil1.jpg"
@@ -302,7 +370,6 @@
                 </div>
               </div>
 
-              <!-- Profil 3 -->
               <div class="profile">
                 <img
                   src="img/profil1.jpg"
@@ -321,7 +388,6 @@
                 </div>
               </div>
 
-              <!-- Profil 4 -->
               <div class="profile">
                 <img
                   src="img/profil1.jpg"
@@ -340,7 +406,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
 
           <section class="comm-slide" data-background-transition="fade">
             <div class="comm-slide"></div>
@@ -839,6 +905,9 @@
                     <li class="fragment" style="--accent-color: #495460">
                       Pas adapté
                     </li>
+                    <li class="fragment" style="--accent-color: #B34290">
+                       Insertion données laborieuse
+                    </li>
                   </ul>
                 </div>
 
@@ -897,7 +966,7 @@
               <!-- Image base de données -->
               <div class="shiny-visual" style="text-align: center">
                 <img
-                  src="./img/circular.png"
+                  src="./img/circular2.PNG"
                   alt="Base de données"
                   style="max-width: 80%"
                 />
@@ -935,7 +1004,7 @@
           </section>
 
           <section class="shiny-slide">
-            <h1>CSS dispersé et peu maintenable</h1>
+            <h1>Code dispersé et peu maintenable</h1>
             <figure class="shiny-visual centered">
               <img
                 src="./img/old_croptraits.png"
@@ -988,7 +1057,7 @@
             </div>
           </section>
           <section class="shiny-slide">
-            <h1>Refonte des interactions BDD</h1>
+            <h1>Restructuration des interactions BDD</h1>
             <div
               style="
                 display: flex;
@@ -1072,7 +1141,7 @@
                   Avant : table mal normalisée
                 </figcaption>
                 <img
-                  src="./img/old-progenitor.png"
+                  src="./img/circular.png"
                   alt="Table BDD mal normalisée"
                   style="
                     width: 20vw;
@@ -1086,18 +1155,15 @@
               <!-- Après -->
               <figure
                 class="shiny-visual"
-                style="flex: 1 1 0; text-align: center; min-width: 250px"
+                style="flex: 1 1 0; text-align: center; min-width: 150px"
               >
                 <figcaption style="color: #ffffff; margin-bottom: 0.5rem">
                   Après : table normalisée
                 </figcaption>
                 <img
-                  src="./img/progenitor-after.png"
+                  src="./img/circular-new.png"
                   alt="Table BDD normalisée"
                   style="
-                    width: 100%;
-                    height: auto;
-                    max-height: 60vh;
                     border-radius: 4px;
                   "
                 />
@@ -1132,6 +1198,16 @@
             </p>
 
             <div style="display: flex; justify-content: center">
+              <img
+                  src="./img/darwin.PNG"
+                  alt="Darwin Core"
+                  style="
+                  width: 50%;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  "
+                />
+                <!--
               <iframe
                 src="https://dwc.tdwg.org/terms/"
                 style="
@@ -1143,7 +1219,7 @@
                 frameborder="0"
                 allowfullscreen
               >
-              </iframe>
+              </iframe>-->
             </div>
           </section>
         </section>
