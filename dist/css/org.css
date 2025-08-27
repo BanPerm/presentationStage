@@ -124,4 +124,28 @@
       max-height: 60vh;
     }
   }
-  
+
+
+/* Bullets */
+.org-points-2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  font-size: clamp(1.5rem, 1.7vw, 1.60rem);
+}
+
+.org-points-2 li {
+  background: linear-gradient(135deg, #ffffffcc, #f9fdf7cc);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.2rem 1.5rem 1.2rem 3.2rem; /* espace pour l’icône */
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
